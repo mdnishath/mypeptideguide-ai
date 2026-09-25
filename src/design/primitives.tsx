@@ -17,6 +17,38 @@ export function Column({ children, className = "" }: { children: ReactNode; clas
   return <div className={`mx-auto w-full max-w-[760px] px-5 sm:px-8 ${className}`}>{children}</div>;
 }
 
+/** Inner-page header on a soft wash: eyebrow, display title, lede. */
+export function PageHero({
+  eyebrow,
+  title,
+  accent,
+  children,
+  aside,
+}: {
+  eyebrow: ReactNode;
+  title: ReactNode;
+  accent?: ReactNode;
+  children?: ReactNode;
+  aside?: ReactNode;
+}) {
+  return (
+    <div className="wash-page">
+      <Container className="pt-12 pb-12 sm:pt-16 sm:pb-16">
+        <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div>
+            <Eyebrow>{eyebrow}</Eyebrow>
+            <Display size="lg" className="mt-4">
+              {title} {accent && <Em>{accent}</Em>}
+            </Display>
+            {children && <Lede className="mt-5">{children}</Lede>}
+          </div>
+          {aside}
+        </div>
+      </Container>
+    </div>
+  );
+}
+
 /* -------------------------------------------------------------------------- */
 /* Type                                                                       */
 /* -------------------------------------------------------------------------- */

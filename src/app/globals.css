@@ -142,6 +142,53 @@
     background: linear-gradient(180deg, var(--color-paper-2), #fff);
   }
 
+  /* Lighter wash for inner-page headers */
+  .wash-page {
+    background:
+      radial-gradient(700px 360px at 90% -20%, rgba(20, 134, 201, 0.12), transparent 62%),
+      radial-gradient(520px 300px at 0% 40%, rgba(141, 67, 184, 0.08), transparent 62%),
+      linear-gradient(180deg, #fff, #fff 70%, var(--color-paper-2));
+  }
+
+  /* Tinted card: set --tone / --tone-wash inline */
+  .tone-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: 22px;
+    background: linear-gradient(150deg, var(--tone-wash, var(--color-paper-2)) 0%, #fff 55%);
+    transition:
+      transform 180ms var(--ease-out),
+      box-shadow 180ms var(--ease-out),
+      border-color 180ms var(--ease-out);
+  }
+  .tone-card:hover {
+    border-color: var(--tone, var(--color-line-2));
+    box-shadow: var(--shadow-lift);
+  }
+  a.tone-card:hover,
+  button.tone-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .tone-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background: var(--tone-wash);
+    color: var(--tone-deep, var(--tone));
+  }
+
+  /* Result panel inside a tool */
+  .result-panel {
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--tone-wash), #fff);
+    border: 1px solid color-mix(in srgb, var(--tone) 18%, #fff);
+  }
+
   /* Premium button: gradient, soft shadow, lift on hover */
   .btn-primary {
     background-image: linear-gradient(135deg, #1a98d9, #1486c9 55%, #2e5bd7);

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import Calculators from "@/features/calculators/Calculators";
 import Glp1Titration from "@/features/calculators/Glp1Titration";
-import { Container, Display, Em, Eyebrow, Lede, Notice } from "@/design/primitives";
+import { Container, Display, Em, Eyebrow, Notice, PageHero } from "@/design/primitives";
 import { getPublishedCompounds } from "@/content/loader";
 import { JsonLd, articleJsonLd, faqJsonLd, pageMeta } from "@/seo/meta";
 
@@ -12,6 +12,16 @@ export const metadata = pageMeta({
     "Free peptide calculators: reconstitution (vial + BAC water → units on a U-100 syringe), mcg/mg converter, syringe fill, half-life, cycle planner, two-compound blends and the semaglutide / tirzepatide titration schedule, with worked examples.",
   path: "/calculators",
 });
+
+const TOOLS: [string, string][] = [
+  ["reconstitution", "Reconstitution"],
+  ["units", "Units"],
+  ["syringe", "Syringe"],
+  ["half-life", "Half-life"],
+  ["cycles", "Cycles"],
+  ["blends", "Blends"],
+  ["titration", "GLP-1 titration"],
+];
 
 const FAQ = [
   {
@@ -50,7 +60,11 @@ function Section({ n, title, children }: { n: string; title: string; children: R
 }
 
 function Worked({ children }: { children: ReactNode }) {
-  return <div className="tnum rounded-[var(--radius-ctl)] bg-paper-2 px-5 py-4 text-[14.5px] leading-[1.9] text-ink [&_b]:font-semibold">{children}</div>;
+  return (
+    <div className="tnum rounded-2xl border border-blue/15 bg-[linear-gradient(135deg,#e8f3fa,#fff)] px-6 py-5 text-[15px] leading-[1.9] text-ink [&_b]:font-bold [&_b]:text-blue-deep">
+      {children}
+    </div>
+  );
 }
 
 export default function CalculatorsPage() {
@@ -67,21 +81,30 @@ export default function CalculatorsPage() {
       <JsonLd data={articleJsonLd({ headline: "Peptide calculators: reconstitution, units to draw and titration", description: "How peptide dosing maths works, with worked examples.", path: "/calculators" })} />
       <JsonLd data={faqJsonLd(FAQ)} />
 
-      <Container className="pt-12 sm:pt-16">
-        <Eyebrow>Calculators</Eyebrow>
-        <Display size="lg" className="mt-4">
-          Your maths, <Em>checked.</Em>
-        </Display>
-        <Lede className="mt-5">
-          Seven working tools. They record and verify what you chose. They never suggest what to take. Everything assumes a standard U-100
-          insulin syringe.
-        </Lede>
+      <PageHero
+        eyebrow="Calculators"
+        title="Your maths,"
+        accent="checked."
+        aside={
+          <nav aria-label="Tools" className="flex flex-wrap gap-2 lg:max-w-[360px] lg:justify-end">
+            {TOOLS.map(([id, label]) => (
+              <a key={id} href={`#${id}`} className="rounded-full border border-line bg-paper/80 px-3.5 py-1.5 text-[13px] font-medium text-body backdrop-blur hover:border-blue hover:text-blue-deep">
+                {label}
+              </a>
+            ))}
+          </nav>
+        }
+      >
+        Seven working tools. They record and verify what you chose. They never suggest what to take. Everything assumes a standard U-100
+        insulin syringe.
+      </PageHero>
 
-        <div className="mt-12 max-w-[880px]">
-          <Calculators />
+      <Container className="-mt-6">
+        <Calculators />
+        <div className="mt-5">
           <Glp1Titration options={glp1} />
-          <Notice compact className="mt-8" />
         </div>
+        <Notice compact className="mt-8" />
       </Container>
 
       <Container className="mt-24">

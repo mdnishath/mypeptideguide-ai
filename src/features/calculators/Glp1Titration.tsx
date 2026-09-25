@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { TrendingUp } from "lucide-react";
 import type { CompoundSummary } from "@/core/schema";
 import { concentration, drawMl, fmt, u100 } from "@/core/dose";
 import { addDays } from "@/core/plan/schedule";
 import { todayISO } from "@/core/plan/plan";
 import AddToProtocol from "@/features/library/AddToProtocol";
 import { DateField, Field, NumberField, Segmented } from "@/features/plan/fields";
+import { ToolCard } from "./Calculators";
 
 type Option = { key: string; label: string; compound: CompoundSummary };
 
@@ -26,11 +28,8 @@ export default function Glp1Titration({ options }: { options: Option[] }) {
   const conc = concentration(vialMg, waterMl);
 
   return (
-    <section id="titration" className="scroll-mt-24 border-t border-line py-8">
-      <h2 className="m-0 name text-[26px] leading-none text-ink">GLP-1 titration schedule</h2>
-      <p className="mt-2 mb-0 text-[13px] text-body">The weekly step-up from the prescribing label, laid over real dates.</p>
-
-      <div className="mt-5 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-[auto_1fr_1fr_1fr_1fr] lg:items-end">
+    <ToolCard id="titration" tone="magenta" icon={TrendingUp} title="GLP-1 titration schedule" note="The weekly step-up from the prescribing label, laid over real dates.">
+      <div className="grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-[auto_1fr_1fr_1fr_1fr] lg:items-end">
         <div className="pb-2">
           <Segmented label="Schedule" value={key} onChange={setKey} options={options.map((o) => ({ value: o.key, label: o.label }))} />
         </div>
@@ -48,12 +47,12 @@ export default function Glp1Titration({ options }: { options: Option[] }) {
         </Field>
       </div>
 
-      <div className="mt-6 overflow-x-auto">
+      <div className="mt-6 overflow-x-auto rounded-2xl border border-line bg-paper">
         <table className="w-full min-w-[560px] border-collapse text-[14px]">
           <thead>
-            <tr className="text-left">
+            <tr className="bg-paper-2 text-left">
               {["Step", "Weeks", "Dates", "Weekly dose", conc ? "Draw (U-100)" : "Units"].map((h) => (
-                <th key={h} className="eyebrow border-b border-line py-2 pr-4 font-semibold">
+                <th key={h} className="eyebrow px-4 py-3 font-bold">
                   {h}
                 </th>
               ))}
@@ -65,18 +64,20 @@ export default function Glp1Titration({ options }: { options: Option[] }) {
               const last = i === steps.length - 1;
               const ml = conc ? drawMl(s.dose, conc) : 0;
               return (
-                <tr key={i}>
-                  <td className="tnum border-b border-line py-3 pr-4 name text-[18px] text-ink">{i + 1}</td>
-                  <td className="tnum border-b border-line py-3 pr-4 text-body">{last ? `${i * per + 1}+` : `${i * per + 1}–${(i + 1) * per}`}</td>
-                  <td className="border-b border-line py-3 pr-4 text-body">
+                <tr key={i} className="border-t border-line">
+                  <td className="px-4 py-3">
+                    <span className="name inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--tone-wash)] text-[15px] text-[var(--tone-deep)]">{i + 1}</span>
+                  </td>
+                  <td className="tnum px-4 py-3 text-body">{last ? `${i * per + 1}+` : `${i * per + 1}–${(i + 1) * per}`}</td>
+                  <td className="px-4 py-3 text-body">
                     {longDate(from)}
                     {last ? " onward" : ` – ${longDate(addDays(from, per * 7 - 1))}`}
                   </td>
-                  <td className="tnum border-b border-line py-3 pr-4 font-medium text-ink">{fmt(s.dose, 2)} mg</td>
-                  <td className="tnum border-b border-line py-3 text-body">
+                  <td className="tnum px-4 py-3 text-[16px] font-bold text-ink">{fmt(s.dose, 2)} mg</td>
+                  <td className="tnum px-4 py-3 text-body">
                     {ml ? (
                       <>
-                        <b className="font-medium text-ink">{fmt(u100(ml), 1)} units</b> · {fmt(ml, 3)} mL
+                        <b className="font-semibold text-ink">{fmt(u100(ml), 1)} units</b> · {fmt(ml, 3)} mL
                       </>
                     ) : (
                       "add vial + water"
@@ -96,6 +97,6 @@ export default function Glp1Titration({ options }: { options: Option[] }) {
       <div className="mt-4">
         <AddToProtocol compound={opt.compound} />
       </div>
-    </section>
+    </ToolCard>
   );
 }

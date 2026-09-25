@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-import { ArrowLink, Column, Display, Notice } from "@/design/primitives";
+import { Column, Display, Notice } from "@/design/primitives";
+import { ArrowRight } from "lucide-react";
+import { toneStyle } from "@/design/tones";
 import { getGuides } from "@/content/loader";
 import { JsonLd, articleJsonLd, pageMeta } from "@/seo/meta";
 
@@ -47,20 +49,23 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
 
       <div className="mt-12 flex flex-col gap-10">
         {g.sections.map((s, i) => (
-          <section key={s.heading} className="hairline pt-8">
-            <div className="flex items-baseline gap-4">
-              <span className="name text-[15px] text-muted">0{i + 1}</span>
-              <h2 className="m-0 name text-[28px] leading-[1.1] text-ink">{s.heading}</h2>
+          <section key={s.heading} className="grid gap-4 sm:grid-cols-[56px_1fr]">
+            <span className="name bg-brand-cta flex h-11 w-11 items-center justify-center rounded-full text-[17px] text-white">{i + 1}</span>
+            <div className="hairline pt-2 sm:border-t-0 sm:pt-1">
+              <h2 className="m-0 text-[26px] leading-[1.15] font-bold tracking-[-0.02em] text-ink">{s.heading}</h2>
+              <p className="measure mt-3 mb-0 text-[16px] leading-[1.75] text-body">{s.body}</p>
             </div>
-            <p className="measure mt-4 mb-0 text-[16px] leading-[1.75] text-body">{s.body}</p>
           </section>
         ))}
       </div>
 
       {tool && (
-        <div className="hairline mt-12 pt-6">
-          <ArrowLink href={tool.href}>{tool.label}</ArrowLink>
-        </div>
+        <Link href={tool.href} style={toneStyle("blue")} className="tone-card group mt-14 flex items-center justify-between gap-6 p-6">
+          <span className="text-[17px] font-semibold tracking-[-0.01em] text-ink">{tool.label}</span>
+          <span className="bg-brand-cta flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white transition-transform group-hover:translate-x-1">
+            <ArrowRight size={18} aria-hidden="true" />
+          </span>
+        </Link>
       )}
       <Notice className="mt-10" />
     </Column>
