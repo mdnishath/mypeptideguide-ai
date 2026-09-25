@@ -1,0 +1,67 @@
+{
+  "slug": "epithalon",
+  "name": "Epithalon",
+  "subtitle": "Telomerase research peptide",
+  "class": "cellular-longevity",
+  "mechanismClass": "bioregulator",
+  "goals": [
+    "longevity",
+    "sleep"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "anecdotal",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "Elderly-cohort human data exists — from one Russian program that hasn't been widely replicated.",
+  "caveat": "The human data comes from one research program and has not been independently replicated.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "5–10 mg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Short · limited data",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "A synthetic four-amino-acid peptide (AEDG) from the Russian bioregulator school, proposed to activate telomerase and normalize pineal melatonin rhythm — the basis of both its longevity and sleep claims.",
+    "how": "The proposed mechanism — telomerase activation plus pineal support — comes from cell and animal work and small human cohorts from a single research program. It has never been independently replicated at scale, which matters more than the mechanism’s elegance.",
+    "research": "Elderly-cohort studies from the St. Petersburg program reported normalized melatonin and even long-term mortality improvements — striking claims that remain single-source after decades. We grade it anecdotal despite the human data because reproducibility, not existence, is the bar.",
+    "dosage": "Community protocols reference 5–10 mg SubQ daily in short 10–20-day courses, cycled a few times a year — inherited from the original program, not from dose-finding trials.",
+    "researchBullets": null,
+    "safety": [
+      [
+        "ok",
+        "Short courses appear well tolerated in the published cohorts"
+      ],
+      [
+        "wt",
+        "Single-source evidence is the core limitation — respect it"
+      ],
+      [
+        "bad",
+        "No Western regulatory review of any kind"
+      ],
+      [
+        "bad",
+        "Long-term self-use data does not exist"
+      ]
+    ],
+    "faq": [
+      [
+        "Why anecdotal if human studies exist?",
+        "The studies are real but come from one program without independent replication. Our grade reflects reproducibility, not just existence."
+      ]
+    ],
+    "refs": [
+      "Khavinson VKh, Morozov VG — Peptides of pineal gland and thymus prolong human life · Neuro Endocrinol Lett, 2003"
+    ]
+  }
+}

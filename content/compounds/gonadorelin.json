@@ -1,0 +1,70 @@
+{
+  "slug": "gonadorelin",
+  "name": "Gonadorelin",
+  "subtitle": "GnRH",
+  "class": "sexual-health",
+  "mechanismClass": "gnrh",
+  "goals": [
+    "libido"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Native GnRH — clinical fertility tool, also run alongside TRT to keep the natural axis signalling.",
+  "caveat": "Clinical use is diagnostic or fertility-specific; use alongside TRT is clinic practice, not trial-backed.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "100–200 mcg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Minutes",
+  "interactsWith": [
+    "kisspeptin-10"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Native GnRH — clinical fertility tool, also run alongside TRT to keep the natural axis signalling.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

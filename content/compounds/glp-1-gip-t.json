@@ -1,0 +1,101 @@
+{
+  "slug": "glp-1-gip-t",
+  "name": "GLP-1/GIP (T)",
+  "subtitle": "Dual agonist, weekly",
+  "class": "metabolic-glp1",
+  "mechanismClass": "glp1-agonist",
+  "goals": [
+    "weight-loss",
+    "energy"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "Dual-incretin agonist outperforming single GLP-1s in head-to-head weight trials.",
+  "caveat": "GI effects are dose-dependent and front-loaded; the trial populations had obesity, not general body-composition goals.",
+  "dosing": {
+    "reportedRange": {
+      "min": 2.5,
+      "max": 15,
+      "unit": "mg"
+    },
+    "frequency": "weekly",
+    "timing": "any",
+    "typicalCycleWeeks": 72,
+    "titration": [
+      {
+        "week": 0,
+        "dose": 2.5
+      },
+      {
+        "week": 4,
+        "dose": 5
+      },
+      {
+        "week": 8,
+        "dose": 7.5
+      },
+      {
+        "week": 12,
+        "dose": 10
+      },
+      {
+        "week": 16,
+        "dose": 12.5
+      },
+      {
+        "week": 20,
+        "dose": 15
+      }
+    ],
+    "source": "Zepbound (tirzepatide) US Prescribing Information — dose-escalation schedule; Jastreboff AM et al. — SURMOUNT-1 · N Engl J Med, 2022",
+    "conventionNote": "2.5–15 mg/week"
+  },
+  "halfLifeHours": 120,
+  "halfLifeLabel": "~5 days",
+  "interactsWith": [
+    "cagrilintide",
+    "tesofensine"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Dual-incretin agonist outperforming single GLP-1s in head-to-head weight trials.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

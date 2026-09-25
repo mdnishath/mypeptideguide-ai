@@ -1,0 +1,70 @@
+{
+  "slug": "kisspeptin-10",
+  "name": "Kisspeptin-10",
+  "subtitle": "Reproductive cascade",
+  "class": "sexual-health",
+  "mechanismClass": "kisspeptin",
+  "goals": [
+    "libido"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Sits at the very top of the reproductive hormone cascade. Well studied, poorly mapped for self-use.",
+  "caveat": "Well studied as a research tool; there is no mapped protocol for self-use.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "1–4 nmol/kg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Minutes",
+  "interactsWith": [
+    "gonadorelin"
+  ],
+  "experienceLevel": "experienced",
+  "profileComplete": true,
+  "profile": {
+    "what": "Sits at the very top of the reproductive hormone cascade. Well studied, poorly mapped for self-use.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

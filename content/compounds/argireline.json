@@ -1,0 +1,68 @@
+{
+  "slug": "argireline",
+  "name": "Argireline",
+  "subtitle": "Acetyl hexapeptide-8, topical",
+  "class": "skin-cosmetic",
+  "mechanismClass": "snare-inhibitor",
+  "goals": [
+    "skin-hair"
+  ],
+  "route": [
+    "topical"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Topical ‘Botox-like’ hexapeptide with small controlled studies on expression lines. Modest, real, cosmetic.",
+  "caveat": "Small controlled studies on expression lines; the effect is real but modest.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "5–10% solution"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Topical",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Topical ‘Botox-like’ hexapeptide with small controlled studies on expression lines. Modest, real, cosmetic.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

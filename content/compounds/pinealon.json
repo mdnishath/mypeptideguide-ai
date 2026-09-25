@@ -1,0 +1,68 @@
+{
+  "slug": "pinealon",
+  "name": "Pinealon",
+  "subtitle": "Peptide bioregulator",
+  "class": "neural-cognitive",
+  "mechanismClass": "bioregulator",
+  "goals": [
+    "cognitive"
+  ],
+  "route": [
+    "oral"
+  ],
+  "evidenceGrade": "anecdotal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Short bioregulator from the Russian peptide school; Western evidence is minimal.",
+  "caveat": "Published human evidence is minimal, dated or unreplicated.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": false,
+  "profile": {
+    "what": "Short bioregulator from the Russian peptide school; Western evidence is minimal.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "wt",
+        "Published human evidence is minimal, dated, or unreplicated"
+      ],
+      [
+        "wt",
+        "Most circulating claims come from forums and vendors"
+      ],
+      [
+        "bad",
+        "Safety profile for self-use is not established"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Safety profile for self-use is not established"
+      ],
+      [
+        "bad",
+        "No regulatory review; sourcing and purity vary widely"
+      ],
+      [
+        "bad",
+        "Claims circulate faster than evidence — treat all of them as unverified"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

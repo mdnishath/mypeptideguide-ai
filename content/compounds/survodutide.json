@@ -1,0 +1,75 @@
+{
+  "slug": "survodutide",
+  "name": "Survodutide",
+  "subtitle": "GLP-1/glucagon dual agonist",
+  "class": "metabolic-glp1",
+  "mechanismClass": "glp1-agonist",
+  "goals": [
+    "weight-loss"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "Late-stage dual agonist adding glucagon-driven energy burn to GLP-1 satiety.",
+  "caveat": "Late-stage but not approved; GI side effects led a notable share of trial participants to stop.",
+  "dosing": {
+    "reportedRange": {
+      "min": 0.6,
+      "max": 4.8,
+      "unit": "mg"
+    },
+    "frequency": "weekly",
+    "timing": "any",
+    "typicalCycleWeeks": 46,
+    "titration": null,
+    "source": "le Roux CW et al. — Survodutide for obesity: a randomised, dose-finding phase 2 trial · Lancet Diabetes Endocrinol, 2024",
+    "conventionNote": "0.6–4.8 mg/week"
+  },
+  "halfLifeHours": 168,
+  "halfLifeLabel": "~ weekly",
+  "interactsWith": [
+    "cagrilintide",
+    "tesofensine"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Late-stage dual agonist adding glucagon-driven energy burn to GLP-1 satiety.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

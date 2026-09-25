@@ -1,0 +1,70 @@
+{
+  "slug": "ghk-cu",
+  "name": "GHK-Cu",
+  "subtitle": "Copper tripeptide",
+  "class": "skin-cosmetic",
+  "mechanismClass": "copper-peptide",
+  "goals": [
+    "skin-hair",
+    "recovery"
+  ],
+  "route": [
+    "topical",
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Copper-binding tripeptide with legitimate topical clinical data from the cosmetics literature.",
+  "caveat": "The clinical data is topical and cosmetic; injected use has no comparable evidence.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "Topical · 1–2 mg SubQ"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Minutes in serum",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Copper-binding tripeptide with legitimate topical clinical data from the cosmetics literature.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

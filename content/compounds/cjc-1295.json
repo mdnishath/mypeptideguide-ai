@@ -1,0 +1,76 @@
+{
+  "slug": "cjc-1295",
+  "name": "CJC-1295",
+  "subtitle": "GHRH analogue",
+  "class": "endocrine-gh",
+  "mechanismClass": "ghrh",
+  "goals": [
+    "muscle-growth",
+    "longevity"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Comes in DAC and no-DAC forms — the choice materially changes the exposure profile.",
+  "caveat": "DAC and no-DAC versions behave very differently; the human data is for the DAC form only.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "pre-bed",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "100 mcg – 2 mg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "DAC ~8 days · no-DAC ~30 min",
+  "interactsWith": [
+    "ipamorelin",
+    "mk-677",
+    "ghrp-2",
+    "ghrp-6",
+    "hexarelin",
+    "igf-1-lr3"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Comes in DAC and no-DAC forms — the choice materially changes the exposure profile.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

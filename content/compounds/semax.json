@@ -1,0 +1,69 @@
+{
+  "slug": "semax",
+  "name": "Semax",
+  "subtitle": "Nootropic peptide",
+  "class": "neural-cognitive",
+  "mechanismClass": "semax",
+  "goals": [
+    "cognitive",
+    "recovery"
+  ],
+  "route": [
+    "nasal"
+  ],
+  "evidenceGrade": "anecdotal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Decades of clinical use in Russia for stroke recovery; no Western regulatory approval.",
+  "caveat": "Decades of Russian clinical use, but no Western regulatory review or modern RCTs.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "200–600 mcg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Minutes",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Decades of clinical use in Russia for stroke recovery; no Western regulatory approval.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "wt",
+        "Published human evidence is minimal, dated, or unreplicated"
+      ],
+      [
+        "wt",
+        "Most circulating claims come from forums and vendors"
+      ],
+      [
+        "bad",
+        "Safety profile for self-use is not established"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Safety profile for self-use is not established"
+      ],
+      [
+        "bad",
+        "No regulatory review; sourcing and purity vary widely"
+      ],
+      [
+        "bad",
+        "Claims circulate faster than evidence — treat all of them as unverified"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

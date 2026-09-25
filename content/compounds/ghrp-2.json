@@ -1,0 +1,74 @@
+{
+  "slug": "ghrp-2",
+  "name": "GHRP-2",
+  "subtitle": "GH releasing peptide",
+  "class": "endocrine-gh",
+  "mechanismClass": "ghrp",
+  "goals": [
+    "muscle-growth",
+    "sleep"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Older, stronger GHRP with human study history — more GH per dose than ipamorelin, more cortisol and hunger too.",
+  "caveat": "More GH per dose than ipamorelin — and more cortisol, prolactin and hunger with it.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "pre-bed",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "100–300 mcg"
+  },
+  "halfLifeHours": 0.5,
+  "halfLifeLabel": "~30 min",
+  "interactsWith": [
+    "cjc-1295",
+    "sermorelin",
+    "tesamorelin",
+    "igf-1-lr3"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Older, stronger GHRP with human study history — more GH per dose than ipamorelin, more cortisol and hunger too.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "ss-31",
+  "name": "SS-31",
+  "subtitle": "Mitochondrial peptide",
+  "class": "cellular-longevity",
+  "mechanismClass": "cardiolipin-targeting",
+  "goals": [
+    "longevity",
+    "energy"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Mitochondria-targeted candidate with genuine clinical-trial history in rare disease and heart failure.",
+  "caveat": "Trialled in rare mitochondrial disease and heart failure — not in healthy adults.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Mitochondria-targeted candidate with genuine clinical-trial history in rare disease and heart failure.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

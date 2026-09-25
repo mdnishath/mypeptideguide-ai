@@ -1,0 +1,68 @@
+{
+  "slug": "selank",
+  "name": "Selank",
+  "subtitle": "Anxiolytic peptide",
+  "class": "neural-cognitive",
+  "mechanismClass": "selank",
+  "goals": [
+    "cognitive"
+  ],
+  "route": [
+    "nasal"
+  ],
+  "evidenceGrade": "anecdotal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Anxiety-focused cousin of Semax — approved in Russia, untested in Western RCTs.",
+  "caveat": "Approved in Russia; untested in Western randomised trials.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "250–500 mcg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Minutes",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Anxiety-focused cousin of Semax — approved in Russia, untested in Western RCTs.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "wt",
+        "Published human evidence is minimal, dated, or unreplicated"
+      ],
+      [
+        "wt",
+        "Most circulating claims come from forums and vendors"
+      ],
+      [
+        "bad",
+        "Safety profile for self-use is not established"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Safety profile for self-use is not established"
+      ],
+      [
+        "bad",
+        "No regulatory review; sourcing and purity vary widely"
+      ],
+      [
+        "bad",
+        "Claims circulate faster than evidence — treat all of them as unverified"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

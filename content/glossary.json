@@ -1,0 +1,106 @@
+[
+  {
+    "term": "Agonist",
+    "definition": "A molecule that binds a receptor and switches it on — most peptides here are agonists of something."
+  },
+  {
+    "term": "Anecdotal evidence",
+    "definition": "Reports without controls: forums, testimonials, clinic lore. Our lowest grade, stated plainly."
+  },
+  {
+    "term": "BAC water",
+    "definition": "Bacteriostatic water — 0.9% benzyl alcohol lets a reconstituted vial survive weeks of repeated draws."
+  },
+  {
+    "term": "Baseline",
+    "definition": "Your own pre-protocol values — the median of at least two panels. Drift from this is usually the earliest signal worth having."
+  },
+  {
+    "term": "Bioavailability",
+    "definition": "The fraction of a dose that reaches circulation. Injection ≈ high; oral peptides usually very low."
+  },
+  {
+    "term": "Biomarker",
+    "definition": "Anything measurable that tracks a biological state — ApoB, hs-CRP, IGF-1, resting heart rate."
+  },
+  {
+    "term": "Cycle",
+    "definition": "A planned on/off period for a protocol. The off weeks are part of the design, not a lapse."
+  },
+  {
+    "term": "Desensitization",
+    "definition": "Receptors down-regulating under constant stimulation — why pulses beat flat elevation for some pathways."
+  },
+  {
+    "term": "GHRH",
+    "definition": "Growth-hormone-releasing hormone. Sermorelin, CJC-1295 and tesamorelin imitate it."
+  },
+  {
+    "term": "Ghrelin",
+    "definition": "The hunger hormone — also the receptor GHRPs, ipamorelin and MK-677 use to trigger GH release."
+  },
+  {
+    "term": "GHRP",
+    "definition": "GH-releasing peptide — the ghrelin-receptor family: GHRP-2, GHRP-6, hexarelin, ipamorelin."
+  },
+  {
+    "term": "Half-life",
+    "definition": "Time for blood levels to fall by half. Sets dosing frequency — minutes for sermorelin, a week for GLP-1s."
+  },
+  {
+    "term": "HPTA axis",
+    "definition": "Hypothalamus–pituitary–testes signalling chain. ‘Keeping the axis alive’ means not letting it go silent."
+  },
+  {
+    "term": "IGF-1",
+    "definition": "Insulin-like growth factor 1 — the downstream marker that shows a GH protocol is actually doing something."
+  },
+  {
+    "term": "Incretin",
+    "definition": "Gut hormones (GLP-1, GIP) that regulate insulin and appetite — the pathway behind the weight-loss injectables."
+  },
+  {
+    "term": "IU",
+    "definition": "International unit — an activity-based measure. On an insulin syringe, 100 units = 1 mL."
+  },
+  {
+    "term": "Lipohypertrophy",
+    "definition": "Fat-layer scarring from repeated injections in one spot. The reason site rotation exists."
+  },
+  {
+    "term": "Peptide",
+    "definition": "A short chain of amino acids — smaller than a protein. Most compounds here are 2–50 residues."
+  },
+  {
+    "term": "Pulsatile release",
+    "definition": "Hormones released in bursts rather than steadily. GH secretagogues try to amplify pulses, not flatten them."
+  },
+  {
+    "term": "RCT",
+    "definition": "Randomized controlled trial — the strongest single study design, and the bar for our top grade."
+  },
+  {
+    "term": "Receptor",
+    "definition": "The cellular lock a peptide’s key fits. Selectivity — hitting one lock only — is what made ipamorelin famous."
+  },
+  {
+    "term": "Reconstitution",
+    "definition": "Dissolving lyophilized peptide in BAC water at a concentration you chose on purpose."
+  },
+  {
+    "term": "SubQ",
+    "definition": "Subcutaneous — injected into the fat layer under the skin. The default route for most peptides."
+  },
+  {
+    "term": "Titration",
+    "definition": "Stepping a dose up on a schedule, letting tolerance to side effects catch up before the next step."
+  },
+  {
+    "term": "Trough",
+    "definition": "The lowest blood level between doses — the consistent moment to draw comparable labs."
+  },
+  {
+    "term": "Vial tracker",
+    "definition": "The calendar’s per-compound counter: doses left in the current vial and its 28-day use-by date."
+  }
+]

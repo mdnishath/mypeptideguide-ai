@@ -1,0 +1,70 @@
+{
+  "slug": "nad",
+  "name": "NAD+",
+  "subtitle": "Coenzyme infusion/injection",
+  "class": "cellular-longevity",
+  "mechanismClass": "nad",
+  "goals": [
+    "longevity",
+    "energy"
+  ],
+  "route": [
+    "iv",
+    "subq"
+  ],
+  "evidenceGrade": "anecdotal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Not a peptide — the coenzyme itself, dripped or injected. The biology is central; human benefit data is early and mixed.",
+  "caveat": "Not a peptide; the biology is central, but human benefit from infusions or injections is early and mixed.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "100–500 mg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Minutes in plasma",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Not a peptide — the coenzyme itself, dripped or injected. The biology is central; human benefit data is early and mixed.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "wt",
+        "Published human evidence is minimal, dated, or unreplicated"
+      ],
+      [
+        "wt",
+        "Most circulating claims come from forums and vendors"
+      ],
+      [
+        "bad",
+        "Safety profile for self-use is not established"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Safety profile for self-use is not established"
+      ],
+      [
+        "bad",
+        "No regulatory review; sourcing and purity vary widely"
+      ],
+      [
+        "bad",
+        "Claims circulate faster than evidence — treat all of them as unverified"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

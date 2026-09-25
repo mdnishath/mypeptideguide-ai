@@ -1,0 +1,72 @@
+{
+  "slug": "bpc-157",
+  "name": "BPC-157",
+  "subtitle": "Body Protection Compound",
+  "class": "tissue-repair",
+  "mechanismClass": "bpc",
+  "goals": [
+    "recovery"
+  ],
+  "route": [
+    "subq",
+    "oral"
+  ],
+  "evidenceGrade": "animal",
+  "citationCount": 2,
+  "reviewedOn": null,
+  "summary": "Strong tendon- and gut-healing results in rodents. No adequately powered human trial has been published.",
+  "caveat": "Every consistent result is in rodents; claims of human tendon or gut healing run far ahead of the data.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "200–500 mcg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Short · limited data",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "A 15-amino-acid fragment related to a protective protein found in gastric juice — and the internet’s favorite healing peptide. Nearly all of that reputation rests on rodent studies.",
+    "how": "Proposed mechanisms center on angiogenesis via VEGF upregulation and nitric-oxide pathway modulation, mapped almost entirely in preclinical models.",
+    "research": "The rodent results across tendon, ligament, gut and vascular injury are remarkably consistent — that part is real. Human evidence is case reports and one small unblinded pilot; no adequately powered RCT has been published, and marketing claims routinely outrun the data.",
+    "dosage": "No approved dose. Community convention references 200–500 mcg SubQ daily, often injected near the injury site — a practice the animal literature (mostly systemic dosing) doesn’t actually settle.",
+    "researchBullets": null,
+    "safety": [
+      [
+        "ok",
+        "Well tolerated in animal work and short-term anecdote"
+      ],
+      [
+        "bad",
+        "Zero controlled human safety data at any dose"
+      ],
+      [
+        "wt",
+        "Pro-angiogenic mechanisms carry a theoretical oncology caution"
+      ],
+      [
+        "wt",
+        "WADA-prohibited for competing athletes"
+      ]
+    ],
+    "faq": [
+      [
+        "Does injection site matter?",
+        "Community lore says near the injury; the animal literature mostly used systemic dosing. Genuinely unsettled."
+      ],
+      [
+        "Oral or injected?",
+        "The gut studies used oral routes; the soft-tissue claims come from injected models."
+      ]
+    ],
+    "refs": [
+      "Sikiric P et al. — Stable gastric pentadecapeptide BPC 157 · Curr Pharm Des, 2020",
+      "Chang CH et al. — BPC 157 enhances tendon fibroblast outgrowth · J Appl Physiol, 2011"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "dsip",
+  "name": "DSIP",
+  "subtitle": "Delta sleep-inducing peptide",
+  "class": "sleep-stress",
+  "mechanismClass": "dsip",
+  "goals": [
+    "sleep"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "anecdotal",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "A compelling name on a thin, decades-old evidence base. We say so plainly.",
+  "caveat": "Its receptor is still unknown and later studies often failed to reproduce the sleep effect.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "pre-bed",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "100–250 mcg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Short · limited data",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Delta sleep-inducing peptide — a nonapeptide isolated in the 1970s from rabbit brain during sleep experiments, and named for what it appeared to do in those first studies.",
+    "how": "Half a century later its receptor and mechanism remain unidentified — a rare gap for a compound this old, and a big part of why replication has been so inconsistent.",
+    "research": "Early animal and small human studies suggested more delta-wave sleep; later attempts frequently failed to reproduce it. The literature is old, thin and contradictory. A compelling name on a weak base — we say so plainly.",
+    "dosage": "No established protocol exists. Community references cluster around 100–250 mcg SubQ before bed.",
+    "researchBullets": null,
+    "safety": [
+      [
+        "ok",
+        "Short-term reports are unremarkable"
+      ],
+      [
+        "wt",
+        "The base is far too thin to call it safe"
+      ],
+      [
+        "bad",
+        "Mechanism unknown — an honest red flag"
+      ],
+      [
+        "bad",
+        "No modern trials, no regulatory review anywhere"
+      ]
+    ],
+    "faq": [
+      [
+        "Does DSIP actually improve sleep?",
+        "Unproven. Early positives were followed by failed replications, and no modern trial has settled the question."
+      ]
+    ],
+    "refs": [
+      "Schoenenberger GA, Monnier M — Characterization of a delta-EEG-sleep-inducing peptide · PNAS, 1977"
+    ]
+  }
+}

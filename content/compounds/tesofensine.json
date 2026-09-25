@@ -1,0 +1,78 @@
+{
+  "slug": "tesofensine",
+  "name": "Tesofensine",
+  "subtitle": "Triple monoamine reuptake inhibitor",
+  "class": "metabolic-glp1",
+  "mechanismClass": "monoamine-reuptake",
+  "goals": [
+    "weight-loss"
+  ],
+  "route": [
+    "oral"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "Non-peptide appetite drug with real phase-2 weight-loss data — and a stimulant side-effect profile to match.",
+  "caveat": "A stimulant-class drug: raised heart rate and blood pressure, insomnia and mood effects came with the weight loss.",
+  "dosing": {
+    "reportedRange": {
+      "min": 0.25,
+      "max": 1,
+      "unit": "mg"
+    },
+    "frequency": "daily",
+    "timing": "morning",
+    "typicalCycleWeeks": 24,
+    "titration": null,
+    "source": "Astrup A et al. — Effect of tesofensine on bodyweight loss in obese patients: a phase 2 trial · Lancet, 2008",
+    "conventionNote": "0.25–0.5 mg"
+  },
+  "halfLifeHours": 216,
+  "halfLifeLabel": "~9 days",
+  "interactsWith": [
+    "glp-1-s",
+    "glp-1-gip-t",
+    "retatrutide",
+    "cagrilintide",
+    "survodutide"
+  ],
+  "experienceLevel": "experienced",
+  "profileComplete": true,
+  "profile": {
+    "what": "Non-peptide appetite drug with real phase-2 weight-loss data — and a stimulant side-effect profile to match.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

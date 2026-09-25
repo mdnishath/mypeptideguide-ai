@@ -1,0 +1,70 @@
+{
+  "slug": "ll-37",
+  "name": "LL-37",
+  "subtitle": "Cathelicidin",
+  "class": "immune-defense",
+  "mechanismClass": "cathelicidin",
+  "goals": [
+    "immune",
+    "recovery"
+  ],
+  "route": [
+    "subq",
+    "topical"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "An antimicrobial peptide the body already makes, trialed clinically for chronic wounds.",
+  "caveat": "Clinical trials were for chronic wounds; systemic self-use is outside anything tested.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "An antimicrobial peptide the body already makes, trialed clinically for chronic wounds.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

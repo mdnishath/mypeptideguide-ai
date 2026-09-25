@@ -1,26 +1,197 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------------------------------------------------------------------
+   Design concept: "Plain Evidence"
+   An editorial, journal-like system. Serif display type that reads as written,
+   not sold; hairlines and white space instead of stacked cards; and the TROO
+   Bio-Labs colour family used with meaning, never as decoration:
+
+     blue    → interactive        green   → human trials
+     orange  → animal data only   purple  → anecdotal
+     magenta → safety flags
+
+   The five-colour rule appears in exactly two places: under the wordmark and
+   as the guide's progress line. Light theme only, on purpose.
+--------------------------------------------------------------------------- */
+
+@theme {
+  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+
+  /* Paper & ink */
+  --color-paper: #ffffff;
+  --color-paper-2: #f7f8fa;
+  --color-paper-3: #eff1f4;
+  --color-ink: #151515;
+  --color-body: #4c5866;
+  --color-muted: #7a8694;
+  --color-ghost: #9aa6b2;
+  --color-line: #e6ebf1;
+  --color-line-2: #dce3ea;
+
+  /* Brand family — the same hues as troobiolabs.org */
+  --color-blue: #1486c9;
+  --color-blue-deep: #0f6fa8;
+  --color-blue-wash: #e8f3fa;
+  --color-green: #73b84a;
+  --color-green-deep: #4e8a2c;
+  --color-green-wash: #eef6e8;
+  --color-orange: #f47b2a;
+  --color-orange-deep: #b8561a;
+  --color-orange-wash: #fef0e6;
+  --color-magenta: #d9368a;
+  --color-magenta-deep: #b52a72;
+  --color-magenta-wash: #fbe9f2;
+  --color-purple: #8d43b8;
+  --color-purple-deep: #6f2f96;
+  --color-purple-wash: #f3ecf9;
+  --color-cyan: #14b8c9;
+  --color-royal: #2e5bd7;
+
+  --radius-ctl: 12px;
+  --radius-panel: 20px;
+
+  --shadow-lift: 0 1px 2px rgba(21, 21, 21, 0.04), 0 16px 40px -24px rgba(21, 21, 21, 0.25);
+  --shadow-float: 0 24px 60px -24px rgba(21, 21, 21, 0.28);
+
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--color-blue-wash);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  input::placeholder {
+    color: var(--color-ghost);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Display type: the serif, tight, slightly optical-sized */
+  .display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  .display-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* Reading measure */
+  .measure {
+    max-width: 62ch;
+  }
+
+  /* The five-colour signature rule */
+  .rule-brand {
+    background-image: linear-gradient(90deg, #d9368a, #8d43b8, #1486c9, #f47b2a, #73b84a);
+  }
+
+  /* Numbered eyebrow: "01 — How it works" */
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .hairline {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Entrance for guide steps */
+  .step-in {
+    animation: step-in 260ms var(--ease-out) both;
+  }
+  @keyframes step-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .fade-in {
+    animation: fade-in 400ms var(--ease-out) both;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Print — the calendar prints as a wall chart. Chrome marked data-print="hide"
+   drops out; the chart marked data-print="only" appears.
+--------------------------------------------------------------------------- */
+@media print {
+  [data-print="hide"] {
+    display: none !important;
+  }
+  [data-print="only"] {
+    display: block !important;
+  }
+  [data-print="page"] {
+    break-after: page;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
 }

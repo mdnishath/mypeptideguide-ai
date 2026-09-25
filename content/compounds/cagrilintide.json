@@ -1,0 +1,78 @@
+{
+  "slug": "cagrilintide",
+  "name": "Cagrilintide",
+  "subtitle": "Amylin analogue",
+  "class": "metabolic-glp1",
+  "mechanismClass": "amylin-analogue",
+  "goals": [
+    "weight-loss"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "Amylin-pathway satiety signal, trialed alongside weekly GLP-1s for combined effect.",
+  "caveat": "Most of its data is in combination with a GLP-1; on its own it has one phase 2 trial.",
+  "dosing": {
+    "reportedRange": {
+      "min": 0.3,
+      "max": 4.5,
+      "unit": "mg"
+    },
+    "frequency": "weekly",
+    "timing": "any",
+    "typicalCycleWeeks": 26,
+    "titration": null,
+    "source": "Lau DCW et al. — Once-weekly cagrilintide for weight management: a dose-finding phase 2 trial · Lancet, 2021",
+    "conventionNote": "0.3–4.5 mg/week"
+  },
+  "halfLifeHours": 192,
+  "halfLifeLabel": "~8 days",
+  "interactsWith": [
+    "glp-1-s",
+    "glp-1-gip-t",
+    "retatrutide",
+    "survodutide",
+    "tesofensine"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Amylin-pathway satiety signal, trialed alongside weekly GLP-1s for combined effect.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

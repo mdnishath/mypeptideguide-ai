@@ -1,0 +1,69 @@
+{
+  "slug": "dihexa",
+  "name": "Dihexa",
+  "subtitle": "Synaptogenic peptide",
+  "class": "neural-cognitive",
+  "mechanismClass": "hgf-met",
+  "goals": [
+    "cognitive"
+  ],
+  "route": [
+    "oral",
+    "topical"
+  ],
+  "evidenceGrade": "animal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Among the most potent synapse-formers in animal work, with essentially zero human safety data.",
+  "caveat": "Potent in animals with essentially no human safety data — and its growth-factor mechanism carries a theoretical tumour caution.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [],
+  "experienceLevel": "experienced",
+  "profileComplete": true,
+  "profile": {
+    "what": "Among the most potent synapse-formers in animal work, with essentially zero human safety data.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Animal models show the headline effects, often consistently"
+      ],
+      [
+        "wt",
+        "Human evidence is case reports and anecdote — nothing controlled"
+      ],
+      [
+        "bad",
+        "No long-term human safety data at any dose"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Tolerability impressions come from animal work and anecdote"
+      ],
+      [
+        "bad",
+        "No controlled human safety data at any dose"
+      ],
+      [
+        "bad",
+        "Not approved for human use — verify regulatory status independently"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

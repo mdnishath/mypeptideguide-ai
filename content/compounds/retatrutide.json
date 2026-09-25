@@ -1,0 +1,76 @@
+{
+  "slug": "retatrutide",
+  "name": "Retatrutide",
+  "subtitle": "Triple agonist, in trials",
+  "class": "metabolic-glp1",
+  "mechanismClass": "glp1-agonist",
+  "goals": [
+    "weight-loss",
+    "energy"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "The most-watched next-generation candidate. Striking early numbers; not yet approved.",
+  "caveat": "Phase 2 data only — not approved anywhere, and anything sold under the name is unregulated.",
+  "dosing": {
+    "reportedRange": {
+      "min": 1,
+      "max": 12,
+      "unit": "mg"
+    },
+    "frequency": "weekly",
+    "timing": "any",
+    "typicalCycleWeeks": 48,
+    "titration": null,
+    "source": "Jastreboff AM et al. — Triple-hormone-receptor agonist retatrutide for obesity: a phase 2 trial · N Engl J Med, 2023",
+    "conventionNote": "1–12 mg/week"
+  },
+  "halfLifeHours": 144,
+  "halfLifeLabel": "~6 days",
+  "interactsWith": [
+    "cagrilintide",
+    "tesofensine"
+  ],
+  "experienceLevel": "experienced",
+  "profileComplete": true,
+  "profile": {
+    "what": "The most-watched next-generation candidate. Striking early numbers; not yet approved.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

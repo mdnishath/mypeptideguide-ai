@@ -1,0 +1,69 @@
+{
+  "slug": "vip",
+  "name": "VIP",
+  "subtitle": "Vasoactive intestinal peptide",
+  "class": "immune-defense",
+  "mechanismClass": "vip",
+  "goals": [
+    "immune",
+    "energy"
+  ],
+  "route": [
+    "nasal"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Native neuropeptide trialed in inflammatory and pulmonary conditions; nasal use popularized by mold-illness protocols.",
+  "caveat": "Trial data covers the studied indication; use outside it goes beyond the evidence.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": false,
+  "profile": {
+    "what": "Native neuropeptide trialed in inflammatory and pulmonary conditions; nasal use popularized by mold-illness protocols.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

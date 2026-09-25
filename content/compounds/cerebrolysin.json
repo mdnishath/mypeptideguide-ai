@@ -1,0 +1,70 @@
+{
+  "slug": "cerebrolysin",
+  "name": "Cerebrolysin",
+  "subtitle": "Porcine peptide mixture",
+  "class": "neural-cognitive",
+  "mechanismClass": "neurotrophic-mixture",
+  "goals": [
+    "cognitive",
+    "recovery"
+  ],
+  "route": [
+    "im",
+    "iv"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Injectable peptide mixture with decades of stroke and dementia trials across Europe and Asia — respectable but heterogeneous results.",
+  "caveat": "Trials are in stroke and dementia patients with heterogeneous results; it is an IV/IM clinical product.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "5–10 mL courses"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Hours",
+  "interactsWith": [],
+  "experienceLevel": "experienced",
+  "profileComplete": true,
+  "profile": {
+    "what": "Injectable peptide mixture with decades of stroke and dementia trials across Europe and Asia — respectable but heterogeneous results.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

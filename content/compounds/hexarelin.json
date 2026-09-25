@@ -1,0 +1,73 @@
+{
+  "slug": "hexarelin",
+  "name": "Hexarelin",
+  "subtitle": "Potent GHRP",
+  "class": "endocrine-gh",
+  "mechanismClass": "ghrp",
+  "goals": [
+    "muscle-growth"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "animal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Strongest classic GHRP per dose, fastest receptor desensitization — a real ceiling on continuous use.",
+  "caveat": "Receptors desensitise quickly under continuous use.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [
+    "cjc-1295",
+    "sermorelin",
+    "tesamorelin",
+    "igf-1-lr3"
+  ],
+  "experienceLevel": "experienced",
+  "profileComplete": false,
+  "profile": {
+    "what": "Strongest classic GHRP per dose, fastest receptor desensitization — a real ceiling on continuous use.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Animal models show the headline effects, often consistently"
+      ],
+      [
+        "wt",
+        "Human evidence is case reports and anecdote — nothing controlled"
+      ],
+      [
+        "bad",
+        "No long-term human safety data at any dose"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Tolerability impressions come from animal work and anecdote"
+      ],
+      [
+        "bad",
+        "No controlled human safety data at any dose"
+      ],
+      [
+        "bad",
+        "Not approved for human use — verify regulatory status independently"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

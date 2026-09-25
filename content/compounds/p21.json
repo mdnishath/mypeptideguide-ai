@@ -1,0 +1,68 @@
+{
+  "slug": "p21",
+  "name": "P21",
+  "subtitle": "CNTF-derived peptide",
+  "class": "neural-cognitive",
+  "mechanismClass": "cntf-derived",
+  "goals": [
+    "cognitive"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "animal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Neurogenesis candidate derived from CNTF; every headline result so far is rodent.",
+  "caveat": "The headline results are from animal models — there is no controlled human data.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": false,
+  "profile": {
+    "what": "Neurogenesis candidate derived from CNTF; every headline result so far is rodent.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Animal models show the headline effects, often consistently"
+      ],
+      [
+        "wt",
+        "Human evidence is case reports and anecdote — nothing controlled"
+      ],
+      [
+        "bad",
+        "No long-term human safety data at any dose"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Tolerability impressions come from animal work and anecdote"
+      ],
+      [
+        "bad",
+        "No controlled human safety data at any dose"
+      ],
+      [
+        "bad",
+        "Not approved for human use — verify regulatory status independently"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

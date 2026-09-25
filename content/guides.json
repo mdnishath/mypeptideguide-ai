@@ -1,0 +1,125 @@
+[
+  {
+    "slug": "recon",
+    "tag": "GETTING STARTED",
+    "title": "Reconstitution, step by step",
+    "dek": "From lyophilized powder to a vial you can actually dose from — without wrecking the peptide.",
+    "readMinutes": 6,
+    "ready": true,
+    "sections": [
+      {
+        "heading": "What you need",
+        "body": "The vial of lyophilized peptide, bacteriostatic (BAC) water, an insulin syringe for the transfer, and alcohol swabs. BAC water — not sterile water — is what lets a vial live in the fridge for weeks: the 0.9% benzyl alcohol keeps it bacteriostatic across multiple draws."
+      },
+      {
+        "heading": "The maths, before the water",
+        "body": "Decide the concentration first. Vial mg ÷ water mL = mg/mL. A 5 mg vial with 2.5 mL gives 2 mg/mL, so a 250 mcg dose is 0.125 mL — 12.5 units on a U-100 syringe. Run it in the calculator and sanity-check that your usual dose lands between 5 and 50 units: too little water makes doses hard to measure, too much makes them uncomfortable volumes."
+      },
+      {
+        "heading": "Adding the water",
+        "body": "Swab both stoppers. Draw the BAC water, then inject it slowly down the inside wall of the peptide vial — never jet it onto the powder. Most peptides dissolve on their own in a minute or two; a gentle swirl is fine, shaking is not. Cloudiness or floaters after full dissolution means the vial is suspect."
+      },
+      {
+        "heading": "Storage and shelf life",
+        "body": "Reconstituted vials live in the fridge, dark, stopper up. Community convention treats 3–4 weeks as the sensible window for most compounds — add the vial to your protocol and the calendar counts doses down for you and flags day 28."
+      }
+    ]
+  },
+  {
+    "slug": "labs",
+    "tag": "LABS",
+    "title": "How to read your first lab panel",
+    "dek": "Reference ranges are population statistics — the useful question is whether a marker moved for you.",
+    "readMinutes": 8,
+    "ready": true,
+    "sections": [
+      {
+        "heading": "The range is not the point",
+        "body": "A lab’s reference interval covers 95% of a broad population — it says almost nothing about what is normal for you. You can drift 20% from your own baseline and still sit comfortably ‘in range’. That drift is usually the earliest signal worth having, which is why your own baseline is the comparison worth making, not the printed interval."
+      },
+      {
+        "heading": "Establish the baseline first",
+        "body": "Two panels before you start anything — ideally a few weeks apart, same lab, same morning conditions, fasted — give you a median to compare against. One panel is a snapshot; two is a baseline; three makes drift statistics honest."
+      },
+      {
+        "heading": "What a starter panel covers",
+        "body": "Lipids (ApoB if you can get it), fasting glucose and HbA1c, a liver pair (ALT/AST), kidney basics (creatinine/eGFR), hs-CRP for inflammation, and the hormone anchors relevant to your protocol — IGF-1 for GH secretagogues, a testosterone panel for anything touching the HPTA axis."
+      },
+      {
+        "heading": "Timing around a protocol",
+        "body": "Draw at consistent times relative to dosing — trough values are comparable, random ones are noise. Re-test 6–8 weeks into a new protocol, then quarterly. Keep each report with a note of what you were taking and when, so every result can be read against the doses that preceded it."
+      }
+    ]
+  },
+  {
+    "slug": "sites",
+    "tag": "GETTING STARTED",
+    "title": "Injection sites and rotation",
+    "dek": "Why the same two inches of abdomen shouldn’t take every dose — and a rotation that survives real life.",
+    "readMinutes": 5,
+    "ready": true,
+    "sections": [
+      {
+        "heading": "Why rotation matters",
+        "body": "Repeated injections into one site cause lipohypertrophy — fat-layer scarring that is unsightly, slows absorption, and makes doses erratic. The fix is boring and absolute: never the same spot twice in a row, and days of rest before a site repeats."
+      },
+      {
+        "heading": "The usual map",
+        "body": "SubQ sites: the abdomen at least two finger-widths from the navel (left/right, upper/lower), the flanks, the front-outer thighs, and the back of the upper arm if someone else injects. The calendar suggests the longest-rested site for every dose and shows it on a body map — follow it and rotation stops being a memory task."
+      },
+      {
+        "heading": "Technique in one paragraph",
+        "body": "Clean skin, new needle every time, pinch a fold, 45–90° depending on lean-ness, steady push, count three before withdrawing. A drop of blood is nothing; persistent pain, heat or swelling is a site telling you to rest it — and worth a note on the dose log."
+      },
+      {
+        "heading": "When to worry",
+        "body": "Redness that spreads after 48 hours, warmth, or induration that grows rather than fades belongs to a clinician, not a forum. Log it either way — patterns across sites are exactly what the notes field is for."
+      }
+    ]
+  },
+  {
+    "slug": "g4",
+    "tag": "PROTOCOLS",
+    "title": "Choosing a first protocol",
+    "dek": "Goal first, compound second — and one variable at a time.",
+    "readMinutes": 7,
+    "ready": false,
+    "sections": []
+  },
+  {
+    "slug": "g5",
+    "tag": "PROTOCOLS",
+    "title": "GLP-1 titration, explained",
+    "dek": "Why every schedule steps up slowly, and what each step is waiting for.",
+    "readMinutes": 6,
+    "ready": false,
+    "sections": []
+  },
+  {
+    "slug": "g6",
+    "tag": "GETTING STARTED",
+    "title": "Storing peptides properly",
+    "dek": "Freezer, fridge, or drawer — what actually degrades a peptide.",
+    "readMinutes": 4,
+    "ready": false,
+    "sections": []
+  },
+  {
+    "slug": "g7",
+    "tag": "EVIDENCE",
+    "title": "How our evidence grades work",
+    "dek": "Human RCT, animal data only, anecdotal — where each line sits and why.",
+    "readMinutes": 5,
+    "ready": false,
+    "sections": []
+  },
+  {
+    "slug": "g8",
+    "tag": "DATA",
+    "title": "Wearables and the recovery score",
+    "dek": "HRV, resting HR and sleep — compared to your own median, not a leaderboard.",
+    "readMinutes": 5,
+    "ready": false,
+    "sections": []
+  }
+]

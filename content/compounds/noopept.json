@@ -1,0 +1,68 @@
+{
+  "slug": "noopept",
+  "name": "Noopept",
+  "subtitle": "Dipeptide nootropic, oral",
+  "class": "neural-cognitive",
+  "mechanismClass": "noopept",
+  "goals": [
+    "cognitive"
+  ],
+  "route": [
+    "oral"
+  ],
+  "evidenceGrade": "anecdotal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Oral dipeptide sold as a nootropic across Eastern Europe; small human studies, big forum reputation.",
+  "caveat": "Small human studies; most of its reputation comes from forums.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "10–30 mg"
+  },
+  "halfLifeHours": 1,
+  "halfLifeLabel": "~1 hour",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Oral dipeptide sold as a nootropic across Eastern Europe; small human studies, big forum reputation.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "wt",
+        "Published human evidence is minimal, dated, or unreplicated"
+      ],
+      [
+        "wt",
+        "Most circulating claims come from forums and vendors"
+      ],
+      [
+        "bad",
+        "Safety profile for self-use is not established"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Safety profile for self-use is not established"
+      ],
+      [
+        "bad",
+        "No regulatory review; sourcing and purity vary widely"
+      ],
+      [
+        "bad",
+        "Claims circulate faster than evidence — treat all of them as unverified"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

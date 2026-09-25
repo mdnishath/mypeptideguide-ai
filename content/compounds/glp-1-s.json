@@ -1,0 +1,97 @@
+{
+  "slug": "glp-1-s",
+  "name": "GLP-1 (S)",
+  "subtitle": "Weekly GLP-1 agonist",
+  "class": "metabolic-glp1",
+  "mechanismClass": "glp1-agonist",
+  "goals": [
+    "weight-loss",
+    "energy"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "The mainstream weekly injectable, with deep RCT coverage for weight and glycemic control.",
+  "caveat": "Nausea and GI effects are common, which is why every schedule titrates slowly; weight tends to return after stopping.",
+  "dosing": {
+    "reportedRange": {
+      "min": 0.25,
+      "max": 2.4,
+      "unit": "mg"
+    },
+    "frequency": "weekly",
+    "timing": "any",
+    "typicalCycleWeeks": 68,
+    "titration": [
+      {
+        "week": 0,
+        "dose": 0.25
+      },
+      {
+        "week": 4,
+        "dose": 0.5
+      },
+      {
+        "week": 8,
+        "dose": 1
+      },
+      {
+        "week": 12,
+        "dose": 1.7
+      },
+      {
+        "week": 16,
+        "dose": 2.4
+      }
+    ],
+    "source": "Wegovy (semaglutide) US Prescribing Information — dose-escalation schedule; Wilding JPH et al. — STEP 1 · N Engl J Med, 2021",
+    "conventionNote": "0.25–2.4 mg/week"
+  },
+  "halfLifeHours": 168,
+  "halfLifeLabel": "~7 days",
+  "interactsWith": [
+    "cagrilintide",
+    "tesofensine"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "The mainstream weekly injectable, with deep RCT coverage for weight and glycemic control.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

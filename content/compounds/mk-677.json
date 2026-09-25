@@ -1,0 +1,81 @@
+{
+  "slug": "mk-677",
+  "name": "MK-677",
+  "subtitle": "Ibutamoren — oral GH secretagogue",
+  "class": "endocrine-gh",
+  "mechanismClass": "ghrp",
+  "goals": [
+    "sleep",
+    "muscle-growth"
+  ],
+  "route": [
+    "oral"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 3,
+  "reviewedOn": null,
+  "summary": "Not a peptide: an oral small molecule with real human trials — GH and slow-wave sleep rise, so do appetite and glucose.",
+  "caveat": "Appetite, water retention and fasting-glucose drift are consistent; one elderly trial was stopped over a heart-failure signal.",
+  "dosing": {
+    "reportedRange": {
+      "min": 10,
+      "max": 25,
+      "unit": "mg"
+    },
+    "frequency": "daily",
+    "timing": "pre-bed",
+    "typicalCycleWeeks": 52,
+    "titration": null,
+    "source": "Chapman IM et al. — MK-677 in healthy elderly subjects · J Clin Endocrinol Metab, 1996; Nass R et al. — Oral ghrelin mimetic in older adults · Ann Intern Med, 2008",
+    "conventionNote": "10–25 mg"
+  },
+  "halfLifeHours": 24,
+  "halfLifeLabel": "~24 hours",
+  "interactsWith": [
+    "cjc-1295",
+    "sermorelin",
+    "tesamorelin",
+    "igf-1-lr3"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Not a peptide: an oral small-molecule ghrelin mimetic (ibutamoren) that raises GH and IGF-1 around the clock. The pill form and a genuine human-trial history made it the most mainstream entry in the GH-secretagogue conversation — and the one with the best-documented side effects.",
+    "how": "It agonizes the same ghrelin receptor as the injectable GHRPs, but a ~24-hour half-life produces sustained elevation rather than pulses. That persistence is the source of both its convenience and its side-effect profile.",
+    "research": "Multiple human trials show raised IGF-1, more slow-wave sleep, and modest lean-mass gains in some cohorts — alongside consistent appetite increase, water retention and fasting-glucose drift. A large trial in frail elderly adults was stopped early over a heart-failure signal in that population.",
+    "dosage": "Trials used 10–25 mg orally once daily, usually at night. There is no approved indication at any dose.",
+    "researchBullets": null,
+    "safety": [
+      [
+        "ok",
+        "Real RCT base — effects and side effects are unusually well documented"
+      ],
+      [
+        "wt",
+        "Expect appetite increase and water retention early"
+      ],
+      [
+        "wt",
+        "Fasting glucose and insulin sensitivity drift — the biomarker to actually track"
+      ],
+      [
+        "bad",
+        "Heart-failure signal in one elderly trial; avoid with cardiac risk"
+      ]
+    ],
+    "faq": [
+      [
+        "Is MK-677 a peptide?",
+        "No — an oral small molecule that mimics ghrelin. It is catalogued here because it competes directly with the injectable secretagogues."
+      ],
+      [
+        "Why does sleep improve on it?",
+        "GH secretagogues increase slow-wave sleep, and MK-677’s trials measured that directly rather than by anecdote."
+      ]
+    ],
+    "refs": [
+      "Nass R et al. — Effects of an oral ghrelin mimetic in healthy older adults · Ann Intern Med, 2008",
+      "Murphy MG et al. — MK-677, an orally active growth hormone secretagogue · JCEM, 1998"
+    ]
+  }
+}

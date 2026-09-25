@@ -1,0 +1,72 @@
+{
+  "slug": "pt-141",
+  "name": "PT-141",
+  "subtitle": "Bremelanotide",
+  "class": "sexual-health",
+  "mechanismClass": "melanocortin-agonist",
+  "goals": [
+    "libido"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "FDA-approved for low desire — the one libido peptide with real prescribing data behind it.",
+  "caveat": "Approved for premenopausal women with low desire; nausea and transient blood-pressure rise are common.",
+  "dosing": {
+    "reportedRange": {
+      "min": 1.75,
+      "max": 1.75,
+      "unit": "mg"
+    },
+    "frequency": "as-needed",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": "Vyleesi (bremelanotide) US Prescribing Information, 2019 — no more than one dose per 24 hours or eight per month",
+    "conventionNote": "1.75 mg"
+  },
+  "halfLifeHours": 11,
+  "halfLifeLabel": "~11 hours",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "FDA-approved for low desire — the one libido peptide with real prescribing data behind it.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

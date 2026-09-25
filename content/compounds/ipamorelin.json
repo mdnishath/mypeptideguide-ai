@@ -1,0 +1,82 @@
+{
+  "slug": "ipamorelin",
+  "name": "Ipamorelin",
+  "subtitle": "GH releasing peptide",
+  "class": "endocrine-gh",
+  "mechanismClass": "ghrp",
+  "goals": [
+    "muscle-growth",
+    "longevity",
+    "sleep"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 2,
+  "reviewedOn": null,
+  "summary": "The gentlest of the GHRP class in published comparisons. Commonly paired with CJC-1295.",
+  "caveat": "The selectivity holds up mechanistically; outcome trials for body composition, recovery or sleep were never run.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "pre-bed",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "200–300 mcg"
+  },
+  "halfLifeHours": 2,
+  "halfLifeLabel": "~2 hours",
+  "interactsWith": [
+    "cjc-1295",
+    "sermorelin",
+    "tesamorelin",
+    "igf-1-lr3"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "A five-amino-acid GH secretagogue that prompts the pituitary to release its own growth hormone. Its reputation rests on selectivity — GH rises without the cortisol and prolactin spillover older GHRPs are known for. It was explored pharmaceutically, never brought to market, and today circulates as a research compound, most often as half of a stack with CJC-1295.",
+    "how": "It selectively activates the ghrelin receptor (GHS-R1a) in the pituitary, producing a short, pulsatile GH burst that follows the body’s natural rhythm rather than a flat elevation. GHRH analogues like CJC-1295 work the complementary receptor — hitting both pathways at once is the whole logic of the classic pairing.",
+    "research": "Characterized in the late 1990s, where it raised GH with minimal effect on cortisol, prolactin and ACTH — the selectivity claim holds up well at the mechanistic level. The honest limitation: development stopped there, so the body-composition, recovery and sleep uses it is marketed for today have no modern outcome-trial base. Solid mechanism, thin outcomes.",
+    "dosage": "No approved dose exists. Community and clinic convention references roughly 200–300 mcg SubQ, once to a few times daily, usually timed before sleep and often alongside CJC-1295. These figures come from practice and early research, not dose-finding trials — convention, not validated medicine.",
+    "researchBullets": null,
+    "safety": [
+      [
+        "ok",
+        "Generally the best-tolerated of the GHRP class in published comparisons"
+      ],
+      [
+        "wt",
+        "Short-term reports: water retention, head-rush, increased appetite"
+      ],
+      [
+        "bad",
+        "No long-term human safety data at community doses — chronically raised GH/IGF-1 carries theoretical risk"
+      ],
+      [
+        "bad",
+        "Not FDA-approved for these uses; legal status varies by jurisdiction"
+      ]
+    ],
+    "faq": [
+      [
+        "Why is it stacked with CJC-1295?",
+        "They raise GH through two different receptors — ghrelin (ipamorelin) and GHRH (CJC-1295) — so the combination stimulates complementary pathways in a pattern closer to natural pulses."
+      ],
+      [
+        "Is it safer than other GHRPs?",
+        "Better tolerated in comparisons, mostly thanks to selectivity. “Cleaner” is not “proven safe long-term” — that data does not exist."
+      ],
+      [
+        "Is it FDA-approved?",
+        "No. It was studied pharmaceutically and never marketed. It sells as a research compound, with the purity and legal caveats that implies."
+      ]
+    ],
+    "refs": [
+      "Raun K et al. — Ipamorelin, the first selective growth hormone secretagogue · Eur J Endocrinol, 1998",
+      "Teichman SL et al. — Prolonged GH/IGF-1 stimulation by CJC-1295 in healthy adults · JCEM, 2006"
+    ]
+  }
+}

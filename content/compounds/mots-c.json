@@ -1,0 +1,70 @@
+{
+  "slug": "mots-c",
+  "name": "MOTS-c",
+  "subtitle": "Mitochondrial peptide",
+  "class": "cellular-longevity",
+  "mechanismClass": "mitochondrial-derived-peptide",
+  "goals": [
+    "longevity",
+    "energy",
+    "weight-loss"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "animal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Mitochondria-encoded ‘exercise mimetic’ with strong bench interest and thin human data.",
+  "caveat": "Strong bench interest; human data is thin and mostly observational.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Mitochondria-encoded ‘exercise mimetic’ with strong bench interest and thin human data.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Animal models show the headline effects, often consistently"
+      ],
+      [
+        "wt",
+        "Human evidence is case reports and anecdote — nothing controlled"
+      ],
+      [
+        "bad",
+        "No long-term human safety data at any dose"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Tolerability impressions come from animal work and anecdote"
+      ],
+      [
+        "bad",
+        "No controlled human safety data at any dose"
+      ],
+      [
+        "bad",
+        "Not approved for human use — verify regulatory status independently"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

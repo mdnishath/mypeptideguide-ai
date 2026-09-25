@@ -1,0 +1,69 @@
+{
+  "slug": "5-amino-1mq",
+  "name": "5-Amino-1MQ",
+  "subtitle": "NNMT inhibitor, small molecule",
+  "class": "metabolic-glp1",
+  "mechanismClass": "nnmt-inhibitor",
+  "goals": [
+    "weight-loss",
+    "energy"
+  ],
+  "route": [
+    "oral"
+  ],
+  "evidenceGrade": "animal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Oral NNMT inhibitor with intriguing fat-loss results in mice. Published human evidence: none.",
+  "caveat": "Fat-loss results are in mice; there is no published human evidence at all.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "50–150 mg"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Short",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Oral NNMT inhibitor with intriguing fat-loss results in mice. Published human evidence: none.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Animal models show the headline effects, often consistently"
+      ],
+      [
+        "wt",
+        "Human evidence is case reports and anecdote — nothing controlled"
+      ],
+      [
+        "bad",
+        "No long-term human safety data at any dose"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Tolerability impressions come from animal work and anecdote"
+      ],
+      [
+        "bad",
+        "No controlled human safety data at any dose"
+      ],
+      [
+        "bad",
+        "Not approved for human use — verify regulatory status independently"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

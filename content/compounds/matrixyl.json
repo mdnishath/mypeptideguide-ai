@@ -1,0 +1,68 @@
+{
+  "slug": "matrixyl",
+  "name": "Matrixyl",
+  "subtitle": "Palmitoyl pentapeptide-4",
+  "class": "skin-cosmetic",
+  "mechanismClass": "signal-peptide",
+  "goals": [
+    "skin-hair"
+  ],
+  "route": [
+    "topical"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Common, well-tolerated signal peptide already shipping in mainstream skincare.",
+  "caveat": "Cosmetic-grade evidence — small studies, modest effects on fine lines.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "3–8% formulation"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Topical",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Common, well-tolerated signal peptide already shipping in mainstream skincare.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

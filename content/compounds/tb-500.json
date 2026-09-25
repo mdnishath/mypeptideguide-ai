@@ -1,0 +1,69 @@
+{
+  "slug": "tb-500",
+  "name": "TB-500",
+  "subtitle": "Thymosin Beta-4 fragment",
+  "class": "tissue-repair",
+  "mechanismClass": "thymosin-beta-4",
+  "goals": [
+    "recovery",
+    "muscle-growth"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "animal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Synthetic fragment of Tβ4, logged for whole-body recovery rather than a single injury site.",
+  "caveat": "A synthetic fragment — the human exposure data belongs to full-length Tβ4, not to TB-500 itself.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "2x-week",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "2–5 mg/week"
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": "Days · limited data",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Synthetic fragment of Tβ4, logged for whole-body recovery rather than a single injury site.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Animal models show the headline effects, often consistently"
+      ],
+      [
+        "wt",
+        "Human evidence is case reports and anecdote — nothing controlled"
+      ],
+      [
+        "bad",
+        "No long-term human safety data at any dose"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Tolerability impressions come from animal work and anecdote"
+      ],
+      [
+        "bad",
+        "No controlled human safety data at any dose"
+      ],
+      [
+        "bad",
+        "Not approved for human use — verify regulatory status independently"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

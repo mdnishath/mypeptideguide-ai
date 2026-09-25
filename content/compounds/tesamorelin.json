@@ -1,0 +1,80 @@
+{
+  "slug": "tesamorelin",
+  "name": "Tesamorelin",
+  "subtitle": "GHRH analogue",
+  "class": "endocrine-gh",
+  "mechanismClass": "ghrh",
+  "goals": [
+    "muscle-growth",
+    "longevity"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "FDA-approved for visceral fat in HIV lipodystrophy; used off-label for body composition.",
+  "caveat": "Approved for HIV-associated visceral fat only; body-composition use in other adults is off-label.",
+  "dosing": {
+    "reportedRange": {
+      "min": 1.4,
+      "max": 2,
+      "unit": "mg"
+    },
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": 26,
+    "titration": null,
+    "source": "Egrifta / Egrifta SV (tesamorelin) US Prescribing Information; Falutz J et al. · N Engl J Med, 2007",
+    "conventionNote": "1–2 mg"
+  },
+  "halfLifeHours": 0.67,
+  "halfLifeLabel": "~40 min",
+  "interactsWith": [
+    "ipamorelin",
+    "mk-677",
+    "ghrp-2",
+    "ghrp-6",
+    "hexarelin",
+    "igf-1-lr3"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "FDA-approved for visceral fat in HIV lipodystrophy; used off-label for body composition.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

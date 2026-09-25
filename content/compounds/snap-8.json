@@ -1,0 +1,68 @@
+{
+  "slug": "snap-8",
+  "name": "Snap-8",
+  "subtitle": "Acetyl octapeptide-3, topical",
+  "class": "skin-cosmetic",
+  "mechanismClass": "snare-inhibitor",
+  "goals": [
+    "skin-hair"
+  ],
+  "route": [
+    "topical"
+  ],
+  "evidenceGrade": "anecdotal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Argireline’s longer sibling, targeting the same expression-wrinkle pathway with mostly vendor-run data.",
+  "caveat": "Published human evidence is minimal, dated or unreplicated.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": false,
+  "profile": {
+    "what": "Argireline’s longer sibling, targeting the same expression-wrinkle pathway with mostly vendor-run data.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "wt",
+        "Published human evidence is minimal, dated, or unreplicated"
+      ],
+      [
+        "wt",
+        "Most circulating claims come from forums and vendors"
+      ],
+      [
+        "bad",
+        "Safety profile for self-use is not established"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Safety profile for self-use is not established"
+      ],
+      [
+        "bad",
+        "No regulatory review; sourcing and purity vary widely"
+      ],
+      [
+        "bad",
+        "Claims circulate faster than evidence — treat all of them as unverified"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

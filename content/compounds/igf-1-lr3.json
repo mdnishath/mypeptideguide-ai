@@ -1,0 +1,78 @@
+{
+  "slug": "igf-1-lr3",
+  "name": "IGF-1 LR3",
+  "subtitle": "Long-arginine IGF-1 analogue",
+  "class": "muscle-performance",
+  "mechanismClass": "igf1",
+  "goals": [
+    "muscle-growth"
+  ],
+  "route": [
+    "subq",
+    "im"
+  ],
+  "evidenceGrade": "animal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Extended-half-life IGF-1 built for cell culture, adopted by bodybuilding. Potent, unforgiving, untested in humans.",
+  "caveat": "Built for cell culture; no human studies, and hypoglycaemia is a real acute risk.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "20–50 mcg"
+  },
+  "halfLifeHours": 25,
+  "halfLifeLabel": "~20–30 hours",
+  "interactsWith": [
+    "ipamorelin",
+    "mk-677",
+    "cjc-1295",
+    "sermorelin",
+    "tesamorelin",
+    "ghrp-2",
+    "ghrp-6",
+    "hexarelin"
+  ],
+  "experienceLevel": "experienced",
+  "profileComplete": true,
+  "profile": {
+    "what": "Extended-half-life IGF-1 built for cell culture, adopted by bodybuilding. Potent, unforgiving, untested in humans.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Animal models show the headline effects, often consistently"
+      ],
+      [
+        "wt",
+        "Human evidence is case reports and anecdote — nothing controlled"
+      ],
+      [
+        "bad",
+        "No long-term human safety data at any dose"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Tolerability impressions come from animal work and anecdote"
+      ],
+      [
+        "bad",
+        "No controlled human safety data at any dose"
+      ],
+      [
+        "bad",
+        "Not approved for human use — verify regulatory status independently"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "ptd-dbm",
+  "name": "PTD-DBM",
+  "subtitle": "Wnt/β-catenin hair peptide",
+  "class": "skin-cosmetic",
+  "mechanismClass": "wnt-modulator",
+  "goals": [
+    "skin-hair"
+  ],
+  "route": [
+    "topical"
+  ],
+  "evidenceGrade": "animal",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "Topical hair-regrowth candidate from Wnt-pathway research — mouse and ex-vivo data only.",
+  "caveat": "The headline results are from animal models — there is no controlled human data.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": null
+  },
+  "halfLifeHours": null,
+  "halfLifeLabel": null,
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": false,
+  "profile": {
+    "what": "Topical hair-regrowth candidate from Wnt-pathway research — mouse and ex-vivo data only.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Animal models show the headline effects, often consistently"
+      ],
+      [
+        "wt",
+        "Human evidence is case reports and anecdote — nothing controlled"
+      ],
+      [
+        "bad",
+        "No long-term human safety data at any dose"
+      ]
+    ],
+    "safety": [
+      [
+        "wt",
+        "Tolerability impressions come from animal work and anecdote"
+      ],
+      [
+        "bad",
+        "No controlled human safety data at any dose"
+      ],
+      [
+        "bad",
+        "Not approved for human use — verify regulatory status independently"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

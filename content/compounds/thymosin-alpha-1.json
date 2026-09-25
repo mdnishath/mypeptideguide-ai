@@ -1,0 +1,72 @@
+{
+  "slug": "thymosin-alpha-1",
+  "name": "Thymosin Alpha-1",
+  "subtitle": "Thymic peptide",
+  "class": "immune-defense",
+  "mechanismClass": "thymosin-alpha",
+  "goals": [
+    "immune"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 1,
+  "reviewedOn": null,
+  "summary": "Approved abroad for immune support. One of the most clinically validated entries here.",
+  "caveat": "Approved outside the US for hepatitis B and as an immune adjunct; general immune-boosting use is off-label.",
+  "dosing": {
+    "reportedRange": {
+      "min": 1.6,
+      "max": 1.6,
+      "unit": "mg"
+    },
+    "frequency": "2x-week",
+    "timing": "any",
+    "typicalCycleWeeks": 26,
+    "titration": null,
+    "source": "Zadaxin (thymalfasin) product information — 1.6 mg twice weekly for 6 months in chronic hepatitis B",
+    "conventionNote": "1.6 mg"
+  },
+  "halfLifeHours": 2,
+  "halfLifeLabel": "~2 hours",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "Approved abroad for immune support. One of the most clinically validated entries here.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

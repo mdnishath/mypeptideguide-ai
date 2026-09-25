@@ -1,0 +1,69 @@
+{
+  "slug": "oxytocin",
+  "name": "Oxytocin",
+  "subtitle": "Neurohormone",
+  "class": "sexual-health",
+  "mechanismClass": "oxytocin",
+  "goals": [
+    "libido",
+    "cognitive"
+  ],
+  "route": [
+    "nasal"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": null,
+  "reviewedOn": null,
+  "summary": "A hormone everyone already makes — approved in obstetrics, studied intranasally for bonding.",
+  "caveat": "Intranasal social-behaviour findings have replicated poorly.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "any",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "12–24 IU"
+  },
+  "halfLifeHours": 0.33,
+  "halfLifeLabel": "~20 min",
+  "interactsWith": [],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "A hormone everyone already makes — approved in obstetrics, studied intranasally for bonding.",
+    "how": null,
+    "research": null,
+    "dosage": null,
+    "researchBullets": [
+      [
+        "ok",
+        "Published human RCTs cover the primary indication — read them before extrapolating"
+      ],
+      [
+        "wt",
+        "Off-label and stacking claims go beyond the trial populations"
+      ],
+      [
+        "bad",
+        "Long-term self-administration data is thin outside clinical settings"
+      ]
+    ],
+    "safety": [
+      [
+        "ok",
+        "Clinical side-effect profiles exist for the approved or trialed indication"
+      ],
+      [
+        "wt",
+        "Off-label and enhancement use falls outside the trial populations"
+      ],
+      [
+        "bad",
+        "No long-term data for self-directed use"
+      ]
+    ],
+    "faq": [],
+    "refs": []
+  }
+}

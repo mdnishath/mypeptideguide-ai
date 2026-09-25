@@ -1,0 +1,80 @@
+{
+  "slug": "sermorelin",
+  "name": "Sermorelin",
+  "subtitle": "GHRH analogue",
+  "class": "endocrine-gh",
+  "mechanismClass": "ghrh",
+  "goals": [
+    "muscle-growth",
+    "longevity",
+    "sleep"
+  ],
+  "route": [
+    "subq"
+  ],
+  "evidenceGrade": "human-rct",
+  "citationCount": 2,
+  "reviewedOn": null,
+  "summary": "Formerly FDA-approved, now prescribed off-label at longevity clinics. The clinical anchor of its class.",
+  "caveat": "Its long-term safety record is pediatric; adult anti-aging use sits outside it.",
+  "dosing": {
+    "reportedRange": null,
+    "frequency": "daily",
+    "timing": "pre-bed",
+    "typicalCycleWeeks": null,
+    "titration": null,
+    "source": null,
+    "conventionNote": "200–500 mcg"
+  },
+  "halfLifeHours": 0.25,
+  "halfLifeLabel": "~10–20 min",
+  "interactsWith": [
+    "ipamorelin",
+    "mk-677",
+    "ghrp-2",
+    "ghrp-6",
+    "hexarelin",
+    "igf-1-lr3"
+  ],
+  "experienceLevel": "any",
+  "profileComplete": true,
+  "profile": {
+    "what": "A 29-amino-acid fragment of natural GHRH — the shortest piece that keeps full activity. It was once FDA-approved for pediatric GH deficiency and later withdrawn for commercial reasons, which leaves it with the deepest clinical paper trail of the GHRH analogues. Today it is prescribed off-label at longevity clinics.",
+    "how": "It binds the pituitary’s GHRH receptor and triggers a natural GH pulse, preserving the feedback loops that a direct GH injection bypasses — the body can still down-regulate if levels run high. Evening dosing rides the largest natural pulse of the day.",
+    "research": "Approval-era trials established GH and IGF-1 elevation and mapped tolerability in real patients — rare ground truth in this category. Modern anti-aging and sleep uses lean on that older base plus small newer studies; deeper slow-wave sleep shows up as a secondary observation, not a proven indication.",
+    "dosage": "Historical prescribing used roughly 0.2–0.5 mg SubQ nightly, and clinic protocols today look similar. Night dosing is deliberate — it stacks the induced pulse on the natural one.",
+    "researchBullets": null,
+    "safety": [
+      [
+        "ok",
+        "The class’s clinical anchor — real prescribing history and tolerability data"
+      ],
+      [
+        "wt",
+        "Common: injection-site reactions, flushing, transient head-rush"
+      ],
+      [
+        "wt",
+        "The long-term data is pediatric — it does not cover adult anti-aging use"
+      ],
+      [
+        "bad",
+        "Off-label today; sourcing and purity vary"
+      ]
+    ],
+    "faq": [
+      [
+        "How is it different from ipamorelin?",
+        "Different receptor: sermorelin mimics GHRH, ipamorelin mimics ghrelin. Both end in a GH pulse — which is why clinics often combine them."
+      ],
+      [
+        "Why was it withdrawn?",
+        "Commercial reasons, not safety — recombinant GH took its market."
+      ]
+    ],
+    "refs": [
+      "Prakash A, Goa KL — Sermorelin: a review of its use · BioDrugs, 1999",
+      "Walker RF — Sermorelin: a better approach to management of adult-onset GH insufficiency? · Clin Interv Aging, 2006"
+    ]
+  }
+}
