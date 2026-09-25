@@ -5,8 +5,7 @@
   "class": "metabolic-glp1",
   "mechanismClass": "glp1-agonist",
   "goals": [
-    "weight-loss",
-    "energy"
+    "weight-loss"
   ],
   "route": [
     "subq"

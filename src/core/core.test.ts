@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { getAllCompoundRecords, getPublishedCompounds } from "@/content/loader";
 import { EMPTY_ANSWERS, type GuideAnswers } from "./guide/questions";
-import { preclinicalWouldAdd, runGuide } from "./guide/filter";
+import { loosenWouldAdd, runGuide } from "./guide/filter";
 import { decodePlan, defaultItem, encodePlan, emptyPlan, parsePlan, type Plan, type PlanItem } from "./plan/plan";
 import { planWarnings } from "./plan/warnings";
 import { buildSchedule, SUBQ_SITES, daysBetween } from "./plan/schedule";
@@ -81,10 +81,21 @@ describe("guide filter", () => {
     expect(ruledOut.find((r) => r.compound.slug === "ipamorelin")?.reasons.join()).toMatch(/no injections/);
   });
 
-  it("reports how many results loosening the evidence question would add", () => {
-    const a = answers({ primaryGoal: "skin-hair", routeComfort: "no-injection" });
-    expect(preclinicalWouldAdd(a, compounds)).toBeGreaterThanOrEqual(0);
-    expect(preclinicalWouldAdd({ ...a, evidence: "include-preclinical" }, compounds)).toBe(0);
+  it("reports how many results each loosening would add", () => {
+    const a = answers({ primaryGoal: "longevity", routeComfort: "no-injection" });
+    expect(runGuide(a, compounds).shortlist).toHaveLength(0);
+    const { preclinical, injections } = loosenWouldAdd(a, compounds);
+    expect(preclinical).toBe(0); // still nothing without injections
+    expect(injections).toBeGreaterThan(0);
+    expect(loosenWouldAdd({ ...a, evidence: "include-preclinical", routeComfort: "injection-ok" }, compounds)).toEqual({ preclinical: 0, injections: 0 });
+  });
+
+  it("does not file weight-loss drugs under energy or a stroke drug under tissue recovery", () => {
+    const energy = runGuide(answers({ primaryGoal: "energy" }), compounds).shortlist.map((c) => c.slug);
+    expect(energy).not.toContain("glp-1-s");
+    expect(energy).not.toContain("retatrutide");
+    const recovery = runGuide(answers({ primaryGoal: "recovery" }), compounds).shortlist.map((c) => c.slug);
+    expect(recovery).not.toContain("cerebrolysin");
   });
 });
 

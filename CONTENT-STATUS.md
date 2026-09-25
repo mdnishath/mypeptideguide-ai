@@ -77,6 +77,32 @@ draw from, it falls back to a generic line per grade. Please review all 40.
   The other 34 have a summary, research bullets by grade, and safety bullets.
 - **Guides**: 3 written, 5 listed as "Coming next".
 
+## 2b. Guide audit (2026-09-26)
+
+`src/core/guide/guide.audit.test.ts` runs every answer combination (10 goals × 3 experience
+× 2 route × 2 evidence) and asserts the brief's promises: results are filed under the goal,
+"human trials only" never returns a weaker grade, "no injections" never returns an
+injection-only compound, first-timers never see experienced-only or anecdotal compounds,
+sorting is by evidence, and every exclusion carries a reason. It runs against the real
+content, so a bad edit fails the build.
+
+**Two goal filings changed** because they produced misleading top results:
+
+| Compound | Was | Now | Why |
+|---|---|---|---|
+| GLP-1 (S), GLP-1/GIP (T), Retatrutide | weight-loss, energy | weight-loss | Someone asking about *energy* got semaglutide as the top result |
+| Cerebrolysin | cognitive, recovery | cognitive | A stroke drug given IM/IV was the #1 *tissue-repair* result |
+
+**Judgment calls left as filed, for Andrew to confirm:**
+- GHRP-2, Ipamorelin, Sermorelin under *sleep* (GH secretagogues deepen slow-wave sleep; the
+  sleep evidence is secondary).
+- Oxytocin under *cognitive* (intranasal social/mood findings, poorly replicated).
+- SS-31 under *energy* and *longevity* (trials in mitochondrial disease and heart failure,
+  not healthy adults). With the GLP-1s removed it is the only human-trial energy option.
+- LL-37 under *immune* and *recovery*; GHK-Cu under *recovery* (its human data is topical).
+- *Longevity* has no non-injected option. The empty state now says so and offers to allow
+  injections rather than returning nothing.
+
 ## 3. Owned by Andrew (per the brief)
 
 - Final question wording: `src/core/guide/questions.ts`.

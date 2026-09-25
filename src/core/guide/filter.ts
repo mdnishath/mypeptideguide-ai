@@ -72,9 +72,13 @@ export function runGuide(a: GuideAnswers, compounds: CompoundSummary[]): GuideRe
   return { shortlist, ruledOut };
 }
 
-/** How many more results loosening question 7 would add — for the empty state. */
-export function preclinicalWouldAdd(a: GuideAnswers, compounds: CompoundSummary[]): number {
-  if (a.evidence !== "human-only") return 0;
-  const loosened = runGuide({ ...a, evidence: "include-preclinical" }, compounds);
-  return loosened.shortlist.length - runGuide(a, compounds).shortlist.length;
+/**
+ * For the empty state: how many results each loosening would add, so the
+ * page can offer the change honestly instead of silently widening criteria.
+ */
+export function loosenWouldAdd(a: GuideAnswers, compounds: CompoundSummary[]): { preclinical: number; injections: number } {
+  const base = runGuide(a, compounds).shortlist.length;
+  const preclinical = a.evidence === "human-only" ? runGuide({ ...a, evidence: "include-preclinical" }, compounds).shortlist.length - base : 0;
+  const injections = a.routeComfort === "no-injection" ? runGuide({ ...a, routeComfort: "injection-ok" }, compounds).shortlist.length - base : 0;
+  return { preclinical, injections };
 }

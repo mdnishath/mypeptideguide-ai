@@ -5,8 +5,7 @@
   "class": "neural-cognitive",
   "mechanismClass": "neurotrophic-mixture",
   "goals": [
-    "cognitive",
-    "recovery"
+    "cognitive"
   ],
   "route": [
     "im",

@@ -7,7 +7,7 @@ import { ArrowLeft, ChevronDown, X } from "lucide-react";
 import type { CompoundSummary } from "@/core/schema";
 import { GOAL_BY_SLUG } from "@/core/taxonomy";
 import { isComplete } from "@/core/guide/questions";
-import { preclinicalWouldAdd, runGuide } from "@/core/guide/filter";
+import { loosenWouldAdd, runGuide } from "@/core/guide/filter";
 import { defaultItem, emptyPlan, type Plan } from "@/core/plan/plan";
 import { KEYS, useStored } from "@/state/store";
 import { Button, Container, Display, Em, GradeMark, Notice, Wordmark } from "@/design/primitives";
@@ -24,7 +24,7 @@ export default function Results({ compounds }: { compounds: CompoundSummary[] })
   const { answers } = saved;
 
   const result = useMemo(() => runGuide(answers, compounds), [answers, compounds]);
-  const couldAdd = useMemo(() => preclinicalWouldAdd(answers, compounds), [answers, compounds]);
+  const loosen = useMemo(() => loosenWouldAdd(answers, compounds), [answers, compounds]);
 
   if (!hydrated) return <div className="min-h-[70vh]" />;
 
@@ -168,20 +168,34 @@ export default function Results({ compounds }: { compounds: CompoundSummary[] })
                 No published compound for {goal.label.toLowerCase()} matches every answer you gave. We&rsquo;d rather say so than
                 quietly widen the criteria.
               </p>
-              {couldAdd > 0 ? (
-                <>
-                  <p className="measure mt-3 mb-0 text-[15px] text-body">
-                    Including preclinical evidence would add {couldAdd} option{couldAdd === 1 ? "" : "s"}, each clearly labelled.
-                  </p>
-                  <Button onClick={() => setEvidence("include-preclinical")} className="mt-6">
-                    Include preclinical evidence
+              <div className="mt-6 flex flex-col gap-3">
+                {loosen.preclinical > 0 && (
+                  <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-paper-2 px-5 py-4">
+                    <span className="text-[14.5px] text-body">
+                      Including preclinical evidence adds <b className="font-semibold text-ink">{loosen.preclinical}</b> option{loosen.preclinical === 1 ? "" : "s"}, each clearly labelled.
+                    </span>
+                    <Button size="sm" onClick={() => setEvidence("include-preclinical")}>
+                      Include preclinical
+                    </Button>
+                  </div>
+                )}
+                {loosen.injections > 0 && (
+                  <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-paper-2 px-5 py-4">
+                    <span className="text-[14.5px] text-body">
+                      Every option for {goal.label.toLowerCase()} that fits your other answers is injected. Allowing injections adds{" "}
+                      <b className="font-semibold text-ink">{loosen.injections}</b>.
+                    </span>
+                    <Button size="sm" onClick={() => setSaved({ answers: { ...answers, routeComfort: "injection-ok" }, step: saved.step })}>
+                      Allow injections
+                    </Button>
+                  </div>
+                )}
+                {loosen.preclinical === 0 && loosen.injections === 0 && (
+                  <Button href="/guide" variant="secondary" className="self-start">
+                    Change my answers
                   </Button>
-                </>
-              ) : (
-                <Button href="/guide" variant="secondary" className="mt-6">
-                  Change my answers
-                </Button>
-              )}
+                )}
+              </div>
             </div>
           )}
 
