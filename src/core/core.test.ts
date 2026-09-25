@@ -6,6 +6,7 @@ import { decodePlan, defaultItem, encodePlan, emptyPlan, parsePlan, type Plan, t
 import { planWarnings } from "./plan/warnings";
 import { buildSchedule, SUBQ_SITES, daysBetween } from "./plan/schedule";
 import { scheduleToIcs } from "./plan/ics";
+import { calendarEventsFor, googleCalendarUrl, rruleFor } from "./plan/google";
 import { GRADE_RANK } from "./taxonomy";
 
 const compounds = getPublishedCompounds();
@@ -205,5 +206,35 @@ describe("ics export", () => {
 
   it("refuses an empty schedule", () => {
     expect(scheduleToIcs(buildSchedule(plan([]), bySlug)).ok).toBe(false);
+  });
+});
+
+describe("google calendar links", () => {
+  it("makes one recurring event per run of identical doses", () => {
+    const glp = { ...defaultItem(get("glp-1-s")), cycleWeeks: 12 };
+    const s = buildSchedule(plan([glp]), bySlug);
+    const events = calendarEventsFor(s, () => "weekly");
+    expect(events.map((e) => [e.count, e.rrule])).toEqual([
+      [4, "RRULE:FREQ=WEEKLY;COUNT=4"],
+      [4, "RRULE:FREQ=WEEKLY;COUNT=4"],
+      [4, "RRULE:FREQ=WEEKLY;COUNT=4"],
+    ]);
+    expect(events[0].title).toBe("GLP-1 (S) — 0.25 mg");
+    expect(events[1].date).toBe("2026-11-02");
+    const url = new URL(googleCalendarUrl(events[0]));
+    expect(url.searchParams.get("dates")).toBe("20261005T090000/20261005T091000");
+    expect(url.searchParams.get("recur")).toBe("RRULE:FREQ=WEEKLY;COUNT=4");
+  });
+
+  it("splits runs at cycle boundaries and expresses every frequency", () => {
+    const item = { ...defaultItem(get("ipamorelin")), dose: 250, cycleWeeks: 2, offWeeks: 1, repeats: 2, frequency: "5-on-2-off" as const };
+    const s = buildSchedule(plan([item]), bySlug);
+    const events = calendarEventsFor(s, () => "5-on-2-off");
+    expect(events).toHaveLength(2);
+    expect(events[0].rrule).toBe("RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;COUNT=10");
+    expect(events[1].label).toBe("Cycle 2 · 10 doses");
+    expect(rruleFor("2x-week", "2026-10-07", 4)).toBe("RRULE:FREQ=WEEKLY;BYDAY=WE,SA;COUNT=4");
+    expect(rruleFor("eod", "2026-10-05", 7)).toBe("RRULE:FREQ=DAILY;INTERVAL=2;COUNT=7");
+    expect(rruleFor("daily", "2026-10-05", 1)).toBeNull();
   });
 });

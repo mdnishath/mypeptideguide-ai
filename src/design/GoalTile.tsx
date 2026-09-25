@@ -43,7 +43,7 @@ export default function GoalTile({
       aria-checked={role === "radio" ? selected : undefined}
       onClick={onClick}
       style={style}
-      className={`tile group relative flex cursor-pointer flex-col gap-4 overflow-hidden rounded-[22px] border p-5 text-left ${
+      className={`tile group relative isolate flex cursor-pointer flex-col gap-4 overflow-hidden rounded-[22px] border bg-paper p-5 text-left ${
         selected ? "border-[var(--tone)] shadow-lift" : "border-line hover:border-[var(--tone)]"
       }`}
     >

@@ -10,6 +10,8 @@ import { todayISO, type Plan } from "@/core/plan/plan";
 import { usePlan } from "@/state/usePlan";
 import { IM_SITES, SUBQ_SITES, addDays, buildSchedule, daysBetween, toDay, type DoseEvent, type Schedule } from "@/core/plan/schedule";
 import { downloadText, scheduleToIcs } from "@/core/plan/ics";
+import { calendarEventsFor } from "@/core/plan/google";
+import GoogleCalendarList from "../plan/GoogleCalendar";
 import { KEYS, useStored } from "@/state/store";
 import { Button, Container, Display, Em, Notice } from "@/design/primitives";
 import { DateField, Field } from "../plan/fields";
@@ -236,6 +238,10 @@ export default function Calendar({ compounds }: { compounds: CompoundSummary[] }
   const [icsError, setIcsError] = useState<string | null>(null);
 
   const schedule = useMemo(() => (plan ? buildSchedule(plan, bySlug) : null), [plan, bySlug]);
+  const gcal = useMemo(
+    () => (schedule && plan ? calendarEventsFor(schedule, (slug) => plan.items.find((i) => i.slug === slug)?.frequency ?? "daily") : []),
+    [schedule, plan],
+  );
   const byDate = useMemo(() => {
     const m = new Map<string, DoseEvent[]>();
     for (const ev of schedule?.events ?? []) m.set(ev.date, [...(m.get(ev.date) ?? []), ev]);
@@ -325,19 +331,28 @@ export default function Calendar({ compounds }: { compounds: CompoundSummary[] }
           <Notice compact className="mt-6" />
 
           {/* Exports first: it's what makes a web product competitive with an app */}
-          <div className="hairline mt-8 pt-6">
-            <div className="flex flex-wrap items-center gap-3">
-              <Button onClick={exportIcs} size="lg">
-                <CalendarDays size={17} aria-hidden="true" /> Add to my calendar (.ics)
-              </Button>
-              <Button onClick={() => window.print()} variant="secondary" size="lg">
-                <Printer size={16} aria-hidden="true" /> Print wall chart
-              </Button>
+          <div className="hairline mt-8 grid gap-8 pt-6 lg:grid-cols-2">
+            <div>
+              <div className="eyebrow">Google Calendar</div>
+              <div className="mt-3">
+                <GoogleCalendarList events={gcal} />
+              </div>
             </div>
-            <p className="measure mt-3 mb-0 text-[13px] leading-[1.6] text-body">
-              One event per dose with a reminder 15 minutes before, including dose, units to draw and injection site. Opens in Apple Calendar and
-              Outlook; in Google Calendar use <i>Settings → Import &amp; export</i>. Ticks on this page stay in this browser.
-            </p>
+            <div>
+              <div className="eyebrow">Apple, Outlook, anything else</div>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <Button onClick={exportIcs} size="lg">
+                  <CalendarDays size={17} aria-hidden="true" /> Download .ics
+                </Button>
+                <Button onClick={() => window.print()} variant="secondary" size="lg">
+                  <Printer size={16} aria-hidden="true" /> Print wall chart
+                </Button>
+              </div>
+              <p className="measure mt-3 mb-0 text-[13px] leading-[1.6] text-body">
+                One event per dose with a reminder 15 minutes before, including dose, units to draw and the exact injection site for that day. Google
+                Calendar can import it too (<i>Settings → Import &amp; export</i>). Ticks on this page stay in this browser.
+              </p>
+            </div>
             {icsError && <p className="mt-2 mb-0 text-[13px] font-medium text-magenta-deep">{icsError}</p>}
             <div className="mt-4">
               <PlanActions plan={plan} knownSlugs={known} onImport={(p) => setPlan(p)} path="/calendar" />

@@ -173,8 +173,8 @@ export default function GuideFlow({ compounds }: { compounds: CompoundSummary[] 
     <>
       <FlowBar step={step + 1} total={QUESTIONS.length} progress={progress} />
 
-      <Container className={`flex flex-1 flex-col justify-center py-10 sm:py-16 transition-opacity ${hydrated ? "opacity-100" : "opacity-0"}`}>
-        <section key={q.id} aria-live="polite" className="step-in mx-auto w-full max-w-[820px]">
+      <Container className={`pt-10 pb-16 sm:pt-14 transition-opacity ${hydrated ? "opacity-100" : "opacity-0"}`}>
+        <section key={q.id} aria-live="polite" className="step-in w-full max-w-[960px]">
           <div className="eyebrow text-purple-deep">{q.eyebrow}</div>
           <Display size="lg" className="mt-3">
             {q.title}
