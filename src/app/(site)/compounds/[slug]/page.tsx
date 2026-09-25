@@ -45,7 +45,7 @@ const reviewed = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateStrin
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="hairline mt-10 pt-8">
-      <h2 className="m-0 font-serif text-[28px] leading-[1.1] text-ink">{title}</h2>
+      <h2 className="m-0 name text-[28px] leading-[1.1] text-ink">{title}</h2>
       <div className="mt-4">{children}</div>
     </section>
   );
@@ -180,7 +180,7 @@ export default async function CompoundPage({ params }: PageProps<"/compounds/[sl
           <ol className="m-0 flex list-none flex-col p-0">
             {[...p.refs, ...(c.dosing.source ? [`Dosing: ${c.dosing.source}`] : [])].map((label, i) => (
               <li key={label} className="flex gap-4 border-b border-line py-3 text-[14px] leading-[1.55] text-ink">
-                <span className="tnum w-5 shrink-0 font-serif text-muted">{i + 1}</span>
+                <span className="tnum w-5 shrink-0 name text-muted">{i + 1}</span>
                 {label}
               </li>
             ))}

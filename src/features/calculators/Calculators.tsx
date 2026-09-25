@@ -9,7 +9,7 @@ function Result({ value, unit, sub }: { value: string; unit?: string; sub?: stri
   return (
     <div className="mt-6">
       <div className="flex items-baseline gap-2">
-        <span className="tnum font-serif text-[40px] leading-none text-ink">{value}</span>
+        <span className="tnum name text-[40px] leading-none text-ink">{value}</span>
         {unit && <span className="text-[11px] font-semibold tracking-[0.1em] text-blue-deep uppercase">{unit}</span>}
       </div>
       {sub && <p className="mt-2 mb-0 text-[13px] leading-[1.55] text-body">{sub}</p>}
@@ -20,7 +20,7 @@ function Result({ value, unit, sub }: { value: string; unit?: string; sub?: stri
 function Tool({ id, title, note, children }: { id: string; title: string; note?: string; children: ReactNode }) {
   return (
     <section id={id} className="scroll-mt-24 border-t border-line py-8">
-      <h2 className="m-0 font-serif text-[26px] leading-none text-ink">{title}</h2>
+      <h2 className="m-0 name text-[26px] leading-none text-ink">{title}</h2>
       {note && <p className="mt-2 mb-0 text-[13px] text-body">{note}</p>}
       <div className="mt-5">{children}</div>
     </section>

@@ -67,7 +67,8 @@ export default function HomePage() {
       <JsonLd data={faqJsonLd(FAQ)} />
 
       {/* ---------------------------------------------------------------- Hero */}
-      <Container className="pt-16 sm:pt-24">
+      <div className="wash-hero">
+      <Container className="pt-16 pb-16 sm:pt-24 sm:pb-20">
         <Eyebrow>Free · No account · Nothing stored on our servers · 18+</Eyebrow>
         <Display size="xl" className="mt-5 max-w-[16ch]">
           Which peptides have real evidence for <Em>your goal?</Em>
@@ -86,9 +87,10 @@ export default function HomePage() {
           </Link>
         </div>
       </Container>
+      </div>
 
       {/* --------------------------------------------------------- How it works */}
-      <Container className="mt-28">
+      <Container className="mt-20">
         <div className="hairline pt-8">
           <Eyebrow n="01">How it works</Eyebrow>
           <Display as="h2" size="md" className="mt-4">
@@ -98,7 +100,7 @@ export default function HomePage() {
         <ol className="m-0 mt-12 grid list-none gap-10 p-0 md:grid-cols-3">
           {STEPS.map((s, i) => (
             <li key={s.title} className="hairline pt-5">
-              <span className="font-serif text-[40px] leading-none text-blue-deep">{i + 1}</span>
+              <span className="name text-[44px] leading-none text-blue-deep">{i + 1}</span>
               <h3 className="mt-4 mb-0 text-[17px] font-semibold text-ink">{s.title}</h3>
               <p className="mt-2 mb-0 text-[14.5px] leading-[1.65] text-body">{s.body}</p>
             </li>

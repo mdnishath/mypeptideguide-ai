@@ -27,7 +27,7 @@ export default function Glp1Titration({ options }: { options: Option[] }) {
 
   return (
     <section id="titration" className="scroll-mt-24 border-t border-line py-8">
-      <h2 className="m-0 font-serif text-[26px] leading-none text-ink">GLP-1 titration schedule</h2>
+      <h2 className="m-0 name text-[26px] leading-none text-ink">GLP-1 titration schedule</h2>
       <p className="mt-2 mb-0 text-[13px] text-body">The weekly step-up from the prescribing label, laid over real dates.</p>
 
       <div className="mt-5 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-[auto_1fr_1fr_1fr_1fr] lg:items-end">
@@ -66,7 +66,7 @@ export default function Glp1Titration({ options }: { options: Option[] }) {
               const ml = conc ? drawMl(s.dose, conc) : 0;
               return (
                 <tr key={i}>
-                  <td className="tnum border-b border-line py-3 pr-4 font-serif text-[18px] text-ink">{i + 1}</td>
+                  <td className="tnum border-b border-line py-3 pr-4 name text-[18px] text-ink">{i + 1}</td>
                   <td className="tnum border-b border-line py-3 pr-4 text-body">{last ? `${i * per + 1}+` : `${i * per + 1}–${(i + 1) * per}`}</td>
                   <td className="border-b border-line py-3 pr-4 text-body">
                     {longDate(from)}

@@ -25,8 +25,12 @@ export function Column({ children, className = "" }: { children: ReactNode; clas
 export function Eyebrow({ n, children, tone = "muted" }: { n?: string; children: ReactNode; tone?: "muted" | "purple" | "blue" }) {
   const color = tone === "purple" ? "text-purple-deep" : tone === "blue" ? "text-blue-deep" : "text-muted";
   return (
-    <div className={`eyebrow ${color}`}>
-      {n && <span className="mr-3 font-serif text-[15px] font-normal tracking-normal text-ink normal-case">{n}</span>}
+    <div className={`eyebrow flex items-center gap-3 ${color}`}>
+      {n ? (
+        <span className="name flex h-7 w-7 items-center justify-center rounded-full border border-line-2 text-[13px] tracking-normal text-ink normal-case">{n}</span>
+      ) : (
+        <span aria-hidden="true" className="rule-brand h-[2px] w-6 rounded-full" />
+      )}
       {children}
     </div>
   );
@@ -58,6 +62,11 @@ export function Em({ children }: { children: ReactNode }) {
   return <em className="display-italic text-blue-deep">{children}</em>;
 }
 
+/** Playfair for compound names and headline figures. */
+export function Name({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return <span className={`name ${className}`}>{children}</span>;
+}
+
 export function Lede({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <p className={`measure m-0 text-[17px] leading-[1.6] text-body sm:text-[19px] ${className}`}>{children}</p>;
 }
@@ -70,13 +79,13 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-full font-medium transition-[background-color,color,border-color,transform] duration-150 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 cursor-pointer";
 
 const VARIANT = {
-  primary: "bg-blue text-white hover:bg-blue-deep",
-  secondary: "border border-line-2 bg-paper text-ink hover:border-ink",
-  ink: "bg-ink text-paper hover:bg-[#2a2a2a]",
+  primary: "btn-primary text-white",
+  secondary: "border border-line-2 bg-paper text-ink hover:border-ink hover:shadow-lift",
+  ink: "bg-ink text-paper hover:bg-blue-deep",
   quiet: "text-blue-deep hover:text-ink px-0",
 } as const;
 
-const SIZE = { lg: "h-13 px-7 text-[15px]", md: "h-11 px-5 text-[14px]", sm: "h-9 px-4 text-[13px]" } as const;
+const SIZE = { lg: "h-14 px-8 text-[15px] font-semibold", md: "h-11 px-6 text-[14px] font-semibold", sm: "h-9 px-4 text-[13px] font-semibold" } as const;
 
 type ButtonProps = {
   children: ReactNode;
@@ -167,7 +176,7 @@ export function Notice({ compact = false, className = "" }: { compact?: boolean;
 export function Wordmark({ size = "md" }: { size?: "sm" | "md" }) {
   return (
     <span className="inline-flex flex-col gap-1">
-      <span className={`font-serif leading-none tracking-[-0.01em] text-ink ${size === "md" ? "text-[22px]" : "text-[18px]"}`}>
+      <span className={`font-bold leading-none tracking-[-0.04em] text-ink ${size === "md" ? "text-[21px]" : "text-[17px]"}`}>
         mypeptideguide<span className="text-blue">.ai</span>
       </span>
       <span aria-hidden="true" className="rule-brand h-[2px] w-full rounded-full" />

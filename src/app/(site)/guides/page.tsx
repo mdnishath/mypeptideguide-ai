@@ -31,7 +31,7 @@ export default function GuidesPage() {
               <div className="tnum mt-1 text-[12px] text-muted">{g.readMinutes} min read</div>
             </div>
             <div className="min-w-0">
-              <h2 className="m-0 font-serif text-[26px] leading-[1.1] text-ink group-hover:text-blue-deep">{g.title}</h2>
+              <h2 className="m-0 name text-[26px] leading-[1.1] text-ink group-hover:text-blue-deep">{g.title}</h2>
               <p className="measure mt-2 mb-0 text-[15px] leading-[1.6] text-body">{g.dek}</p>
             </div>
             <ArrowRight size={18} className="hidden text-muted transition-transform group-hover:translate-x-1 group-hover:text-blue-deep sm:block sm:mt-1" aria-hidden="true" />

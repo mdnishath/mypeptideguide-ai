@@ -170,7 +170,7 @@ function PrintChart({ schedule, byDate, plan }: { schedule: Schedule; byDate: Ma
         return (
           <section key={m} data-print="page" className="mb-4">
             <div className="flex items-baseline justify-between border-b-2 border-black pb-1">
-              <h2 className="m-0 font-serif text-[20px]">{monthLabel(m)}</h2>
+              <h2 className="m-0 name text-[20px]">{monthLabel(m)}</h2>
               <span className="text-[9px]">mypeptideguide.ai · plan from {plan.startDate} · Educational only, not medical advice · 18+</span>
             </div>
             <table className="mt-1 w-full table-fixed border-collapse text-[8.5px] leading-tight">
@@ -354,7 +354,7 @@ export default function Calendar({ compounds }: { compounds: CompoundSummary[] }
                 <button type="button" aria-label="Next" onClick={() => setCursor(view === "month" ? addMonths(focus, 1) : addDays(focus, 7))} className={navBtn}>
                   <ChevronRight size={16} aria-hidden="true" />
                 </button>
-                <h2 className="m-0 flex-1 font-serif text-[24px] text-ink">
+                <h2 className="m-0 flex-1 name text-[24px] text-ink">
                   {view === "month" ? monthLabel(focus) : `Week of ${longDate(weekStart, { day: "numeric", month: "long" })}`}
                 </h2>
                 <button type="button" onClick={() => setCursor(today)} className="cursor-pointer text-[13px] font-medium text-body hover:text-ink">
@@ -382,7 +382,7 @@ export default function Calendar({ compounds }: { compounds: CompoundSummary[] }
                   {selected && (
                     <div className="hairline mt-6 pt-4">
                       <div className="flex items-center justify-between">
-                        <h3 className="m-0 font-serif text-[22px] text-ink">{longDate(selected, { weekday: "long", day: "numeric", month: "long" })}</h3>
+                        <h3 className="m-0 name text-[22px] text-ink">{longDate(selected, { weekday: "long", day: "numeric", month: "long" })}</h3>
                         <button type="button" onClick={() => setSelected(null)} aria-label="Close day" className="cursor-pointer p-1 text-muted hover:text-ink">
                           <X size={16} aria-hidden="true" />
                         </button>

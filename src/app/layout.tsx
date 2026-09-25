@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Instrument_Serif } from "next/font/google";
+import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/seo/meta";
 
-const sans = Instrument_Sans({
-  variable: "--font-instrument-sans",
+const sans = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   weight: "variable",
-  style: ["normal", "italic"],
+  style: ["normal"],
 });
 
-const serif = Instrument_Serif({
-  variable: "--font-instrument-serif",
+const serif = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: "400",
+  weight: "variable",
   style: ["normal", "italic"],
 });
 

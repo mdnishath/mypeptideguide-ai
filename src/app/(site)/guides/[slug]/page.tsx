@@ -49,8 +49,8 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
         {g.sections.map((s, i) => (
           <section key={s.heading} className="hairline pt-8">
             <div className="flex items-baseline gap-4">
-              <span className="font-serif text-[15px] text-muted">0{i + 1}</span>
-              <h2 className="m-0 font-serif text-[28px] leading-[1.1] text-ink">{s.heading}</h2>
+              <span className="name text-[15px] text-muted">0{i + 1}</span>
+              <h2 className="m-0 name text-[28px] leading-[1.1] text-ink">{s.heading}</h2>
             </div>
             <p className="measure mt-4 mb-0 text-[16px] leading-[1.75] text-body">{s.body}</p>
           </section>

@@ -28,7 +28,7 @@ export default function Specimen({ compound }: { compound: CompoundSummary }) {
         <div className="border-b border-line p-6 md:border-r md:border-b-0 md:p-8">
           <div className="eyebrow">Protocol · specimen</div>
           <div className="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <span className="font-serif text-[30px] leading-none text-ink">{compound.name}</span>
+            <span className="name text-[30px] leading-none text-ink">{compound.name}</span>
             <GradeMark grade={compound.evidenceGrade} size="sm" />
           </div>
           <p className="mt-3 mb-0 text-[13px] leading-[1.55] text-body">
@@ -49,7 +49,7 @@ export default function Specimen({ compound }: { compound: CompoundSummary }) {
             </span>
             <span className="text-ghost">→</span>
             <span>
-              draw to <b className="tnum font-serif text-[22px] text-ink">{fmt(first.units!, 1)}</b>{" "}
+              draw to <b className="tnum name text-[22px] text-ink">{fmt(first.units!, 1)}</b>{" "}
               <span className="text-[11px] font-semibold tracking-[0.1em] text-blue-deep uppercase">units</span>
             </span>
           </div>

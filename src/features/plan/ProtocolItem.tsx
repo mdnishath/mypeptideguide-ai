@@ -54,7 +54,7 @@ function Reconstitution({ item, update }: { item: PlanItem; update: (p: Partial<
         <div className="pb-2">
           {ml ? (
             <p className="m-0 text-[13px] text-body">
-              Draw to <b className="tnum font-serif text-[30px] leading-none text-ink">{fmt(u100(ml), 1)}</b>{" "}
+              Draw to <b className="tnum name text-[30px] leading-none text-ink">{fmt(u100(ml), 1)}</b>{" "}
               <span className="text-[11px] font-semibold tracking-[0.1em] text-blue-deep uppercase">units</span>
               <span className="mt-1 block">
                 {fmt(ml, 3)} mL · {fmt(conc, 3)} mg/mL · U-100{item.titration ? " · at the first step" : ""}
@@ -163,7 +163,7 @@ export default function ProtocolItem({
       <div className="flex items-start gap-4">
         <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} className="group min-w-0 flex-1 cursor-pointer text-left">
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <h2 className="m-0 font-serif text-[28px] leading-none text-ink">{c.name}</h2>
+            <h2 className="m-0 name text-[28px] leading-none text-ink">{c.name}</h2>
             <GradeMark grade={c.evidenceGrade} size="sm" />
           </div>
           <p className={`tnum mt-2 mb-0 text-[14px] leading-[1.5] ${item.dose === null && !item.titration ? "text-orange-deep" : "text-body"}`}>

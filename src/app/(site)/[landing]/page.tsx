@@ -125,7 +125,7 @@ export default async function GoalPage({ params }: PageProps<"/[landing]">) {
         <Container key={s.grade} className="mt-16">
           <div className="max-w-[880px]">
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-              <h2 className={`m-0 inline-flex items-center gap-2.5 font-serif text-[30px] text-ink`}>
+              <h2 className={`m-0 inline-flex items-center gap-2.5 name text-[30px] text-ink`}>
                 <span aria-hidden="true" className={`h-3 w-3 rounded-full ${GRADE_COLOR[s.grade].dot}`} />
                 {s.heading}
               </h2>
@@ -142,7 +142,7 @@ export default async function GoalPage({ params }: PageProps<"/[landing]">) {
 
       <Container className="mt-20">
         <div className="max-w-[880px]">
-          <h2 className="m-0 font-serif text-[30px] text-ink">Questions about peptides for {label}</h2>
+          <h2 className="m-0 name text-[30px] text-ink">Questions about peptides for {label}</h2>
           <dl className="m-0 mt-4">
             {faq.map((f) => (
               <div key={f.q} className="border-t border-line py-5">

@@ -15,8 +15,8 @@
 --------------------------------------------------------------------------- */
 
 @theme {
-  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
-  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-montserrat), system-ui, sans-serif;
+  --name: var(--font-playfair), Georgia, serif;
 
   /* Paper & ink */
   --color-paper: #ffffff;
@@ -51,8 +51,9 @@
   --radius-ctl: 12px;
   --radius-panel: 20px;
 
-  --shadow-lift: 0 1px 2px rgba(21, 21, 21, 0.04), 0 16px 40px -24px rgba(21, 21, 21, 0.25);
-  --shadow-float: 0 24px 60px -24px rgba(21, 21, 21, 0.28);
+  --shadow-lift: 0 1px 2px rgba(21, 21, 21, 0.04), 0 24px 48px -28px rgba(46, 91, 215, 0.28);
+  --shadow-float: 0 30px 70px -30px rgba(21, 21, 21, 0.3);
+  --shadow-btn: 0 10px 24px -12px rgba(20, 134, 201, 0.75);
 
   --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
@@ -102,19 +103,67 @@
 }
 
 @layer utilities {
-  /* Display type: the serif, tight, slightly optical-sized */
+  /* Display type: Montserrat, heavy and tight */
   .display {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    letter-spacing: -0.015em;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: -0.035em;
     line-height: 1.02;
     text-wrap: balance;
   }
 
+  /* The accent phrase: Playfair italic, sized up to sit level with the bold sans */
   .display-italic {
-    font-family: var(--font-serif);
+    font-family: var(--name);
     font-style: italic;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    font-size: 1.08em;
+  }
+
+  /* Compound names, big figures */
+  .name {
+    font-family: var(--name);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  /* Soft colour washes behind the hero and feature blocks */
+  .wash-hero {
+    background:
+      radial-gradient(900px 480px at 88% -10%, rgba(20, 134, 201, 0.1), transparent 65%),
+      radial-gradient(700px 420px at -5% 30%, rgba(141, 67, 184, 0.08), transparent 65%),
+      radial-gradient(600px 360px at 60% 110%, rgba(115, 184, 74, 0.07), transparent 65%);
+  }
+
+  .wash-band {
+    background: linear-gradient(180deg, var(--color-paper-2), #fff);
+  }
+
+  /* Premium button: gradient, soft shadow, lift on hover */
+  .btn-primary {
+    background-image: linear-gradient(135deg, #1a98d9, #1486c9 55%, #2e5bd7);
+    box-shadow: var(--shadow-btn);
+    transition:
+      transform 160ms var(--ease-out),
+      box-shadow 160ms var(--ease-out),
+      filter 160ms var(--ease-out);
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.06);
+    box-shadow: 0 14px 30px -12px rgba(20, 134, 201, 0.8);
+  }
+
+  .tile {
+    transition:
+      transform 180ms var(--ease-out),
+      box-shadow 180ms var(--ease-out),
+      background-color 180ms var(--ease-out);
+  }
+  .tile:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
   }
 
   /* Reading measure */
@@ -130,8 +179,8 @@
   /* Numbered eyebrow: "01 — How it works" */
   .eyebrow {
     font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.16em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--color-muted);
   }

@@ -15,7 +15,7 @@ export default function CompoundRow({ c, expanded = false }: { c: CompoundSummar
       <Link href={`/compounds/${c.slug}`} className="grid gap-x-8 gap-y-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
         <div className="min-w-0">
           <GradeMark grade={c.evidenceGrade} citations={c.citationCount} size="sm" />
-          <h3 className="mt-1.5 mb-0 font-serif text-[26px] leading-none text-ink group-hover:text-blue-deep">{c.name}</h3>
+          <h3 className="mt-1.5 mb-0 name text-[26px] leading-none text-ink group-hover:text-blue-deep">{c.name}</h3>
           <div className="mt-1.5 text-[13px] text-muted">
             {c.subtitle} · {CLASS_LABEL[c.class]} · {c.route.map((r) => ROUTE_LABEL[r]).join(" / ")}
           </div>

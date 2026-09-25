@@ -22,7 +22,7 @@ export default function ResultRow({
     <article className={`grid gap-5 border-t border-line py-8 transition-colors sm:grid-cols-[1fr_auto] ${selected ? "bg-blue-wash/40" : ""}`}>
       <div className="min-w-0">
         <GradeMark grade={c.evidenceGrade} citations={c.citationCount} />
-        <h2 className="mt-2 mb-0 font-serif text-[30px] leading-none text-ink">{c.name}</h2>
+        <h2 className="mt-2 mb-0 name text-[30px] leading-none text-ink">{c.name}</h2>
         <div className="mt-1.5 text-[13px] text-muted">
           {c.subtitle} · {CLASS_LABEL[c.class]} · {c.route.map((r) => ROUTE_LABEL[r]).join(" / ")}
         </div>

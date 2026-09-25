@@ -45,7 +45,7 @@ export default function GlossaryBrowser({ terms }: { terms: GlossaryTerm[] }) {
 
       {groups.map((g) => (
         <section key={g.letter} className="mt-10 grid gap-x-8 sm:grid-cols-[64px_1fr]">
-          <div className="font-serif text-[40px] leading-none text-blue-deep">{g.letter}</div>
+          <div className="name text-[40px] leading-none text-blue-deep">{g.letter}</div>
           <dl className="m-0 border-b border-line">
             {g.terms.map((t) => (
               <div key={t.term} className="border-t border-line py-4">

@@ -35,7 +35,7 @@ export function OptionRows<V extends string>({
             onClick={() => onPick(o.value)}
             className={`group flex w-full cursor-pointer items-center gap-5 border-b border-line py-5 text-left transition-colors hover:bg-paper-2 ${on ? "bg-blue-wash/60" : ""}`}
           >
-            <span className={`w-8 shrink-0 pl-2 font-serif text-[20px] ${on ? "text-blue-deep" : "text-ghost group-hover:text-muted"}`}>
+            <span className={`w-8 shrink-0 pl-2 name text-[20px] ${on ? "text-blue-deep" : "text-ghost group-hover:text-muted"}`}>
               {i + 1}
             </span>
             <span className="min-w-0 flex-1">
