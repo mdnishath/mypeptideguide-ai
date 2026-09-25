@@ -4,7 +4,9 @@ import Specimen from "@/features/home/Specimen";
 import { ArrowLink, Button, Container, Display, Em, Eyebrow, GRADE_COLOR, Lede, Notice } from "@/design/primitives";
 import { getPublishedCompounds } from "@/content/loader";
 import { GRADE_LABEL } from "@/core/taxonomy";
-import type { EvidenceGrade } from "@/core/schema";
+import type { EvidenceGrade, GoalSlug } from "@/core/schema";
+import { GOALS } from "@/core/taxonomy";
+import type { GoalCount } from "@/design/GoalTile";
 import { JsonLd, faqJsonLd, pageMeta, SITE } from "@/seo/meta";
 
 export const metadata = pageMeta({
@@ -61,6 +63,12 @@ export default function HomePage() {
   const compounds = getPublishedCompounds();
   const specimen = compounds.find((c) => c.slug === "glp-1-s")!;
   const count = (g: EvidenceGrade) => compounds.filter((c) => c.evidenceGrade === g).length;
+  const goalCounts = Object.fromEntries(
+    GOALS.map((g) => {
+      const items = compounds.filter((c) => c.goals.includes(g.slug));
+      return [g.slug, { total: items.length, rct: items.filter((c) => c.evidenceGrade === "human-rct").length }];
+    }),
+  ) as Record<GoalSlug, GoalCount>;
 
   return (
     <>
@@ -78,7 +86,7 @@ export default function HomePage() {
           ruled out and why, and the maths for whatever you choose.
         </Lede>
         <div className="mt-10">
-          <GoalPicker />
+          <GoalPicker counts={goalCounts} />
         </div>
         <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
           <ArrowLink href="/guide">Or start the guide from the beginning</ArrowLink>

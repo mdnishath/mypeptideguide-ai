@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import type { GoalSlug } from "@/core/schema";
 import { GOALS } from "@/core/taxonomy";
 import type { Option } from "@/core/guide/questions";
-import { GoalIcon } from "@/design/goalIcon";
+import GoalTile from "@/design/GoalTile";
 
 /**
  * A vertical list of options, one per row, with keyboard numerals. Single
@@ -70,34 +70,10 @@ export function GoalGrid({
   label: string;
 }) {
   return (
-    <div role="radiogroup" aria-label={label} className="grid grid-cols-2 gap-px overflow-hidden rounded-[var(--radius-panel)] border border-line bg-line sm:grid-cols-3 lg:grid-cols-5">
-      {GOALS.filter((g) => g.slug !== exclude).map((g) => {
-        const on = value === g.slug;
-        return (
-          <button
-            key={g.slug}
-            type="button"
-            role="radio"
-            aria-checked={on}
-            onClick={() => onPick(g.slug)}
-            className={`group flex cursor-pointer flex-col items-start gap-3 px-4 py-5 text-left transition-colors ${
-              on ? "bg-blue-wash" : "bg-paper hover:bg-paper-2"
-            }`}
-          >
-            <span
-              className={`flex h-9 w-9 items-center justify-center rounded-full border transition-colors ${
-                on ? "border-blue bg-blue text-white" : "border-line text-ink group-hover:border-ink"
-              }`}
-            >
-              <GoalIcon goal={g.slug} />
-            </span>
-            <span>
-              <span className="block text-[15px] font-medium text-ink">{g.label}</span>
-              <span className="mt-0.5 block text-[12px] leading-[1.4] text-muted">{g.blurb}</span>
-            </span>
-          </button>
-        );
-      })}
+    <div role="radiogroup" aria-label={label} className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+      {GOALS.filter((g) => g.slug !== exclude).map((g) => (
+        <GoalTile key={g.slug} goal={g} role="radio" selected={value === g.slug} onClick={() => onPick(g.slug)} />
+      ))}
     </div>
   );
 }
