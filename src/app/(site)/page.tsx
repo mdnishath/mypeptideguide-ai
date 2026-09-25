@@ -100,7 +100,7 @@ export default function HomePage() {
         <ol className="m-0 mt-12 grid list-none gap-10 p-0 md:grid-cols-3">
           {STEPS.map((s, i) => (
             <li key={s.title} className="hairline pt-5">
-              <span className="name text-[44px] leading-none text-blue-deep">{i + 1}</span>
+              <span className="name text-brand text-[44px] leading-none">{i + 1}</span>
               <h3 className="mt-4 mb-0 text-[17px] font-semibold text-ink">{s.title}</h3>
               <p className="mt-2 mb-0 text-[14.5px] leading-[1.65] text-body">{s.body}</p>
             </li>

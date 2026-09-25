@@ -131,9 +131,11 @@
   /* Soft colour washes behind the hero and feature blocks */
   .wash-hero {
     background:
-      radial-gradient(900px 480px at 88% -10%, rgba(20, 134, 201, 0.1), transparent 65%),
-      radial-gradient(700px 420px at -5% 30%, rgba(141, 67, 184, 0.08), transparent 65%),
-      radial-gradient(600px 360px at 60% 110%, rgba(115, 184, 74, 0.07), transparent 65%);
+      radial-gradient(820px 460px at 92% -8%, rgba(20, 134, 201, 0.16), transparent 62%),
+      radial-gradient(640px 400px at -4% 22%, rgba(217, 54, 138, 0.12), transparent 62%),
+      radial-gradient(560px 360px at 40% 105%, rgba(244, 123, 42, 0.1), transparent 62%),
+      radial-gradient(520px 320px at 78% 96%, rgba(115, 184, 74, 0.12), transparent 62%),
+      radial-gradient(480px 320px at 55% 10%, rgba(141, 67, 184, 0.08), transparent 62%);
   }
 
   .wash-band {
@@ -174,6 +176,20 @@
   /* The five-colour signature rule */
   .rule-brand {
     background-image: linear-gradient(90deg, #d9368a, #8d43b8, #1486c9, #f47b2a, #73b84a);
+  }
+
+  /* Headline accent in the brand colours */
+  .text-brand {
+    background-image: linear-gradient(90deg, #d9368a, #8d43b8 30%, #1486c9 55%, #f47b2a 80%, #73b84a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    padding-right: 0.08em;
+  }
+
+  .bg-brand-cta {
+    background-image: linear-gradient(90deg, #14b8c9, #1486c9 55%, #2e5bd7);
   }
 
   /* Numbered eyebrow: "01 — How it works" */

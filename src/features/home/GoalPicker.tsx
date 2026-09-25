@@ -28,7 +28,7 @@ export default function GoalPicker() {
           onClick={() => start(g.slug)}
           className="tile group flex cursor-pointer flex-col items-start gap-4 rounded-2xl border border-line bg-paper/80 px-5 py-5 text-left backdrop-blur hover:border-blue/40"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-paper-2 text-ink transition-colors group-hover:bg-blue group-hover:text-white">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-paper-2 text-ink transition-colors group-hover:bg-brand-cta group-hover:text-white">
             <GoalIcon goal={g.slug} size={19} />
           </span>
           <span className="w-full">

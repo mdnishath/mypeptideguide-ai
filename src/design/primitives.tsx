@@ -22,12 +22,12 @@ export function Column({ children, className = "" }: { children: ReactNode; clas
 /* -------------------------------------------------------------------------- */
 
 /** "01 — Section name". The number is optional. */
-export function Eyebrow({ n, children, tone = "muted" }: { n?: string; children: ReactNode; tone?: "muted" | "purple" | "blue" }) {
+export function Eyebrow({ n, children, tone = "purple" }: { n?: string; children: ReactNode; tone?: "muted" | "purple" | "blue" }) {
   const color = tone === "purple" ? "text-purple-deep" : tone === "blue" ? "text-blue-deep" : "text-muted";
   return (
     <div className={`eyebrow flex items-center gap-3 ${color}`}>
       {n ? (
-        <span className="name flex h-7 w-7 items-center justify-center rounded-full border border-line-2 text-[13px] tracking-normal text-ink normal-case">{n}</span>
+        <span className="name bg-brand-cta flex h-7 w-7 items-center justify-center rounded-full text-[13px] tracking-normal text-white normal-case">{n}</span>
       ) : (
         <span aria-hidden="true" className="rule-brand h-[2px] w-6 rounded-full" />
       )}
@@ -59,7 +59,7 @@ export function Display({
 }
 
 export function Em({ children }: { children: ReactNode }) {
-  return <em className="display-italic text-blue-deep">{children}</em>;
+  return <em className="display-italic text-brand">{children}</em>;
 }
 
 /** Playfair for compound names and headline figures. */

@@ -59,7 +59,7 @@ export default function Header() {
             )}
             <Link
               href="/guide"
-              className="inline-flex h-10 items-center rounded-full bg-ink px-5 text-[14px] font-medium text-paper transition-colors hover:bg-blue"
+              className="btn-primary inline-flex h-10 items-center rounded-full px-5 text-[14px] font-semibold text-white"
             >
               Start the guide
             </Link>
