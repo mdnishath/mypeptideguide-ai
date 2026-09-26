@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <header data-print="hide" className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
       <Container>
-        <div className="flex h-16 items-center gap-6">
+        <div className="flex h-16 items-center gap-3 sm:gap-6">
           <Link href="/" aria-label="mypeptideguide.ai home" className="shrink-0">
             <Wordmark />
           </Link>
@@ -47,21 +47,22 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="ml-auto flex shrink-0 items-center gap-5">
+          <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-5">
             {hasPlan && (
               <Link
                 href="/calendar"
                 className={`inline-flex items-center gap-1.5 text-[14px] font-medium ${isActive("/calendar") || isActive("/protocol") ? "text-ink" : "text-body hover:text-ink"}`}
               >
-                <CalendarDays size={16} strokeWidth={2} aria-hidden="true" />
-                My plan
+                <CalendarDays size={18} strokeWidth={2} aria-hidden="true" />
+                <span className="hidden sm:inline">My plan</span>
               </Link>
             )}
             <Link
               href="/guide"
-              className="btn-primary inline-flex h-10 items-center rounded-full px-5 text-[14px] font-semibold text-white"
+              className="btn-primary inline-flex h-10 items-center rounded-full px-4 text-[13px] font-semibold text-white sm:px-5 sm:text-[14px]"
             >
-              Start the guide
+              <span className="sm:hidden">Start</span>
+              <span className="hidden sm:inline">Start the guide</span>
             </Link>
           </div>
         </div>

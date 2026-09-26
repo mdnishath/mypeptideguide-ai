@@ -208,7 +208,7 @@ export function Notice({ compact = false, className = "" }: { compact?: boolean;
 export function Wordmark({ size = "md" }: { size?: "sm" | "md" }) {
   return (
     <span className="inline-flex flex-col gap-1">
-      <span className={`font-bold leading-none tracking-[-0.04em] text-ink ${size === "md" ? "text-[21px]" : "text-[17px]"}`}>
+      <span className={`font-bold leading-none tracking-[-0.04em] text-ink ${size === "md" ? "text-[18px] sm:text-[21px]" : "text-[17px]"}`}>
         mypeptideguide<span className="text-blue">.ai</span>
       </span>
       <span aria-hidden="true" className="rule-brand h-[2px] w-full rounded-full" />

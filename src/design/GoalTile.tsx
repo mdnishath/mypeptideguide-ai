@@ -86,9 +86,9 @@ export default function GoalTile({
           <span className="block">
             <span className="font-semibold text-ink">{count.total}</span> compounds
           </span>
-          <span className="flex items-center gap-1.5 whitespace-nowrap">
+          <span className="flex items-center gap-1.5">
             <span aria-hidden="true" className={`h-1.5 w-1.5 shrink-0 rounded-full ${count.rct ? "bg-green" : "bg-line-2"}`} />
-            {count.rct ? `${count.rct} with human trials` : "no human trials yet"}
+            {count.rct ? `${count.rct} human trials` : "no human trials"}
           </span>
         </span>
       )}

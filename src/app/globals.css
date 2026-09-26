@@ -63,6 +63,12 @@
     scroll-behavior: smooth;
   }
 
+  /* Nothing may widen the page on small screens. */
+  html,
+  body {
+    overflow-x: clip;
+  }
+
   body {
     margin: 0;
     background: var(--color-paper);

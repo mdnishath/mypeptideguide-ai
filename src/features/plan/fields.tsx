@@ -10,7 +10,7 @@ export function Field({ label, children, hint }: { label: string; children: Reac
   const id = useId();
   return (
     <div className="min-w-0 border-b border-line-2 pb-2 focus-within:border-blue">
-      <label htmlFor={id} className="eyebrow block whitespace-nowrap">
+      <label htmlFor={id} className="eyebrow block">
         {label}
       </label>
       <FieldId.Provider value={id}>{children}</FieldId.Provider>

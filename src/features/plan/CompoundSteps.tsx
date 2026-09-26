@@ -152,48 +152,58 @@ export default function CompoundSteps({
   return (
     <article style={toneStyle(toneKey)} className="tone-card">
       {/* Header */}
-      <div className="flex items-start gap-4 p-6 sm:p-7">
-        <span className="tone-icon shrink-0 text-[15px] font-bold">{index + 1}</span>
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <h2 className="name m-0 text-[30px] leading-none text-ink">{c.name}</h2>
-            <GradeMark grade={c.evidenceGrade} size="sm" />
+      <div className="p-5 sm:p-7">
+        <div className="flex items-start gap-3 sm:gap-4">
+          <span className="tone-icon shrink-0 text-[15px] font-bold">{index + 1}</span>
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <h2 className="name m-0 text-[26px] leading-none break-words text-ink sm:text-[30px]">{c.name}</h2>
+              <GradeMark grade={c.evidenceGrade} size="sm" />
+            </div>
+            <p className={`tnum mt-2 mb-0 text-[14px] leading-[1.5] ${hasDose ? "text-body" : "text-orange-deep"}`}>{summaryOf(item)}</p>
+            <div className="mt-3 flex flex-wrap items-center gap-2 text-[12px] font-semibold">
+              {(["Dose", "When", "Prepare", "Where"] as const).map((s, i) => {
+                const done = [hasDose, true, prepared, true][i];
+                return (
+                  <span key={s} className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 ${done ? "bg-[var(--tone-wash)] text-[var(--tone-deep)]" : "border border-line-2 text-muted"}`}>
+                    {done ? <Check size={12} strokeWidth={3} aria-hidden="true" /> : <span className="tnum">{i + 1}</span>} {s}
+                  </span>
+                );
+              })}
+              <span className="tnum ml-1 text-muted">{doneCount}/4</span>
+            </div>
+            {warnings.length > 0 && (
+              <ul className="m-0 mt-3 flex list-none flex-col gap-1 p-0">
+                {warnings.map((w) => (
+                  <li key={w.title} className="flex items-start gap-2 text-[13px] text-body">
+                    <span aria-hidden="true" className="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
+                    {w.title}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-          <p className={`tnum mt-2 mb-0 text-[14px] leading-[1.5] ${hasDose ? "text-body" : "text-orange-deep"}`}>{summaryOf(item)}</p>
-          <div className="mt-3 flex flex-wrap items-center gap-2 text-[12px] font-semibold">
-            {(["Dose", "When", "Prepare", "Where"] as const).map((s, i) => {
-              const done = [hasDose, true, prepared, true][i];
-              return (
-                <span key={s} className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 ${done ? "bg-[var(--tone-wash)] text-[var(--tone-deep)]" : "border border-line-2 text-muted"}`}>
-                  {done ? <Check size={12} strokeWidth={3} aria-hidden="true" /> : <span className="tnum">{i + 1}</span>} {s}
-                </span>
-              );
-            })}
-            <span className="tnum ml-1 text-muted">{doneCount}/4</span>
+          <div className="hidden shrink-0 items-center gap-1 sm:flex">
+            <button type="button" onClick={onRemove} aria-label={`Remove ${c.name}`} className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-muted hover:bg-magenta-wash hover:text-magenta-deep">
+              <Trash2 size={16} aria-hidden="true" />
+            </button>
+            <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} className="flex h-9 cursor-pointer items-center gap-1.5 rounded-full border border-line-2 bg-paper px-3.5 text-[13px] font-semibold text-ink hover:border-ink">
+              {open ? "Collapse" : complete ? "Review" : "Set up"} <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
+            </button>
           </div>
-          {warnings.length > 0 && (
-            <ul className="m-0 mt-3 flex list-none flex-col gap-1 p-0">
-              {warnings.map((w) => (
-                <li key={w.title} className="flex items-start gap-2 text-[13px] text-body">
-                  <span aria-hidden="true" className="mt-[6px] h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
-                  {w.title}
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
-        <div className="flex shrink-0 items-center gap-1">
+        <div className="mt-4 flex items-center justify-end gap-2 sm:hidden">
           <button type="button" onClick={onRemove} aria-label={`Remove ${c.name}`} className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-muted hover:bg-magenta-wash hover:text-magenta-deep">
             <Trash2 size={16} aria-hidden="true" />
           </button>
-          <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} className="flex h-9 cursor-pointer items-center gap-1.5 rounded-full border border-line-2 bg-paper px-3.5 text-[13px] font-semibold text-ink hover:border-ink">
+          <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} className="flex h-9 cursor-pointer items-center gap-1.5 rounded-full border border-line-2 bg-paper px-3.5 text-[13px] font-semibold text-ink">
             {open ? "Collapse" : complete ? "Review" : "Set up"} <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
           </button>
         </div>
       </div>
 
       {open && (
-        <div className="step-in border-t border-line bg-paper px-6 pb-2 sm:px-7">
+        <div className="step-in border-t border-line bg-paper px-5 pb-2 sm:px-7">
           {/* 1 · Dose */}
           <Step n={1} title="Dose" done={hasDose} tone={tone}>
             <p className="m-0 text-[13px] leading-[1.55] text-body">

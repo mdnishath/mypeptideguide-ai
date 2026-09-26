@@ -91,7 +91,8 @@ export default function Results({ compounds }: { compounds: CompoundSummary[] })
               onClick={() => setSaved({ answers, step: 0 })}
               className="inline-flex items-center gap-1.5 text-[13px] font-medium text-body hover:text-ink"
             >
-              <ArrowLeft size={15} aria-hidden="true" /> Change my answers
+              <ArrowLeft size={15} aria-hidden="true" /> <span className="sm:hidden">Change</span>
+              <span className="hidden sm:inline">Change my answers</span>
             </Link>
             <Link href="/" className="inline-flex items-center gap-1.5 text-[13px] font-medium text-body hover:text-ink">
               Exit <X size={15} aria-hidden="true" />
@@ -233,8 +234,8 @@ export default function Results({ compounds }: { compounds: CompoundSummary[] })
       {n > 0 && (
         <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-paper/95 backdrop-blur">
           <Container>
-            <div className="flex h-[72px] items-center gap-4">
-              <span className="tnum flex-1 text-[14px] text-body">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 py-3 sm:min-h-[72px]">
+              <span className="tnum basis-full text-[13px] text-body sm:basis-auto sm:flex-1 sm:text-[14px]">
                 {picked.size ? (
                   <>
                     <b className="font-medium text-ink">{picked.size} selected</b>
@@ -245,11 +246,11 @@ export default function Results({ compounds }: { compounds: CompoundSummary[] })
                 )}
               </span>
               {existing && (
-                <Button variant="secondary" onClick={() => build("replace")} disabled={!picked.size}>
+                <Button variant="secondary" onClick={() => build("replace")} disabled={!picked.size} className="whitespace-nowrap">
                   Start new
                 </Button>
               )}
-              <Button onClick={() => build(existing ? "add" : "replace")} disabled={!picked.size} arrow>
+              <Button onClick={() => build(existing ? "add" : "replace")} disabled={!picked.size} arrow className="flex-1 whitespace-nowrap sm:flex-none">
                 {existing ? "Add to my protocol" : "Build my protocol"}
               </Button>
             </div>
