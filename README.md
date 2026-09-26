@@ -17,6 +17,9 @@ npm run dev      # http://localhost:3000
 npm test         # core logic: filter, schedule, warnings, .ics, URL codec
 npm run build    # typechecks, validates content/, prerenders every page
 npm run lint
+npm run e2e      # Playwright: full flow on Pixel 7 + desktop, no element past the viewport
+                 # E2E_BASE=https://mypeptideguide-ai.vercel.app npm run e2e  → against production
+node e2e/peek.mjs  # viewport screenshots of key mobile screens, into e2e/shots/
 ```
 
 Next.js 16 (App Router) · React 19 · Tailwind CSS 4 · TypeScript · Vitest · `ics` · `lucide-react`.
