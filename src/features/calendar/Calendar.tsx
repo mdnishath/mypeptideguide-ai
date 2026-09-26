@@ -325,7 +325,7 @@ export default function Calendar({ compounds }: { compounds: CompoundSummary[] }
           <div className="hairline mt-8 pt-6">
             <h2 className="m-0 text-[18px] font-bold tracking-[-0.02em] text-ink">Put it on your calendar</h2>
             <p className="mt-1 mb-5 text-[13px] text-body">One tap. Ticks on this page stay in this browser; reminders fire in whatever calendar you add it to.</p>
-            <CalendarExport schedule={schedule} gcal={gcal} print />
+            <div className="max-w-[520px]"><CalendarExport schedule={schedule} gcal={gcal} print /></div>
             <div className="mt-5">
               <PlanActions plan={plan} knownSlugs={known} onImport={(p) => setPlan(p)} path="/calendar" />
             </div>

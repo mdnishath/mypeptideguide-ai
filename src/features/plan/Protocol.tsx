@@ -248,7 +248,7 @@ export default function Protocol({ compounds }: { compounds: CompoundSummary[] }
               <section style={toneStyle("blue")} className="tone-card p-6">
                 <h2 className="m-0 text-[18px] font-bold tracking-[-0.02em] text-ink">Put it on your calendar</h2>
                 <p className="mt-1 mb-5 text-[13px] leading-[1.55] text-body">One tap. Reminders in the calendar you already use, with dose, units and site.</p>
-                <CalendarExport schedule={schedule} gcal={gcal} compact />
+                <CalendarExport schedule={schedule} gcal={gcal} />
                 <div className="hairline mt-5 pt-4">
                   <Button href="/calendar" variant="secondary" className="w-full" arrow>
                     Open the full calendar

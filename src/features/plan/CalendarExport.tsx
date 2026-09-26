@@ -1,20 +1,28 @@
 "use client";
 
-import { useState } from "react";
-import { Apple, CalendarPlus, Download, Printer } from "lucide-react";
-import type { CalendarEvent } from "@/core/plan/google";
+import { useState, useSyncExternalStore } from "react";
+import { CalendarPlus, Download, Printer } from "lucide-react";
+import { googleCalendarUrl, type CalendarEvent } from "@/core/plan/google";
 import { downloadText, scheduleToIcs } from "@/core/plan/ics";
 import type { Schedule } from "@/core/plan/schedule";
 import GoogleCalendarList from "./GoogleCalendar";
 
+type Provider = "apple" | "google";
+
+const noop = () => () => {};
+const detectApple = () => /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+
 /**
- * "Add to your calendar", the same on the protocol and calendar pages.
- * Google: template links (one per series). Apple: the .ics, which Apple
- * Calendar opens and offers to add on iPhone and Mac. Outlook and everything
- * else import the same file.
+ * One button. The device picks the calendar: Apple devices get the .ics,
+ * which Calendar opens and offers to add; everything else opens Google
+ * Calendar pre-filled. A small link switches. Outlook and the rest import the
+ * same .ics.
  */
-export default function CalendarExport({ schedule, gcal, compact = false, print = false }: { schedule: Schedule; gcal: CalendarEvent[]; compact?: boolean; print?: boolean }) {
+export default function CalendarExport({ schedule, gcal, print = false }: { schedule: Schedule; gcal: CalendarEvent[]; print?: boolean }) {
+  const isApple = useSyncExternalStore(noop, detectApple, () => false);
+  const [choice, setChoice] = useState<Provider | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const provider: Provider = choice ?? (isApple ? "apple" : "google");
 
   const ics = () => {
     const out = scheduleToIcs(schedule);
@@ -23,49 +31,48 @@ export default function CalendarExport({ schedule, gcal, compact = false, print 
     downloadText("mypeptideguide-protocol.ics", out.ics, "text/calendar;charset=utf-8");
   };
 
-  const wrap = compact ? "flex flex-col gap-5" : "grid gap-8 lg:grid-cols-3";
+  const btn = "btn-primary inline-flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold text-white";
 
   return (
-    <div className={wrap}>
-      <div>
-        <div className="eyebrow flex items-center gap-2">
-          <CalendarPlus size={14} aria-hidden="true" /> Google Calendar
-        </div>
-        <div className="mt-3">
-          <GoogleCalendarList events={gcal} compact={compact} />
-        </div>
-      </div>
-
-      <div>
-        <div className="eyebrow flex items-center gap-2">
-          <Apple size={14} aria-hidden="true" /> Apple Calendar
-        </div>
-        <button type="button" onClick={ics} className="mt-3 inline-flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-ink px-6 text-[15px] font-semibold text-paper transition-colors hover:bg-blue-deep">
-          <Apple size={18} aria-hidden="true" /> Add to Apple Calendar
-        </button>
-        <p className="mt-2 mb-0 text-[12px] leading-[1.5] text-muted">
-          Opens in Calendar on iPhone and Mac. Tap <b className="font-semibold text-ink">Add</b>. Every dose, with a reminder 15 minutes before, the units to draw and
-          that day&rsquo;s injection site.
-        </p>
-      </div>
-
-      <div>
-        <div className="eyebrow flex items-center gap-2">
-          <Download size={14} aria-hidden="true" /> Outlook and others
-        </div>
-        <div className="mt-3 flex flex-wrap gap-2">
-          <button type="button" onClick={ics} className="inline-flex h-12 cursor-pointer items-center justify-center gap-2 rounded-full border border-line-2 bg-paper px-5 text-[14px] font-semibold text-ink hover:border-ink">
-            <Download size={16} aria-hidden="true" /> Download .ics
+    <div>
+      {provider === "apple" ? (
+        <>
+          <button type="button" onClick={ics} className={btn}>
+            <CalendarPlus size={18} aria-hidden="true" /> Add to my calendar
           </button>
-          {print && (
-            <button type="button" onClick={() => window.print()} className="inline-flex h-12 cursor-pointer items-center justify-center gap-2 rounded-full border border-line-2 bg-paper px-5 text-[14px] font-semibold text-ink hover:border-ink">
-              <Printer size={16} aria-hidden="true" /> Print wall chart
-            </button>
-          )}
-        </div>
-        <p className="mt-2 mb-0 text-[12px] leading-[1.5] text-muted">Outlook, Samsung, Proton and any calendar that imports .ics. Google Calendar can import it too.</p>
-        {error && <p className="mt-2 mb-0 text-[12.5px] font-medium text-magenta-deep">{error}</p>}
+          <p className="mt-2 mb-0 text-[12px] leading-[1.5] text-muted">
+            Opens in Apple Calendar. Tap <b className="font-semibold text-ink">Add</b>. Every dose with a reminder 15 minutes before, the units to draw and that
+            day&rsquo;s injection site.
+          </p>
+        </>
+      ) : gcal.length === 1 ? (
+        <>
+          <a href={googleCalendarUrl(gcal[0])} target="_blank" rel="noopener noreferrer" className={btn}>
+            <CalendarPlus size={18} aria-hidden="true" /> Add to my calendar
+          </a>
+          <p className="mt-2 mb-0 text-[12px] leading-[1.5] text-muted">Opens Google Calendar with the series pre-filled: dose, units, route and first site. Press Save.</p>
+        </>
+      ) : (
+        <GoogleCalendarList events={gcal} compact />
+      )}
+
+      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[12.5px] text-muted">
+        <span>
+          {provider === "apple" ? "Apple Calendar" : "Google Calendar"} ·{" "}
+          <button type="button" onClick={() => setChoice(provider === "apple" ? "google" : "apple")} className="cursor-pointer font-semibold text-blue-deep hover:text-ink">
+            use {provider === "apple" ? "Google" : "Apple"} instead
+          </button>
+        </span>
+        <button type="button" onClick={ics} className="inline-flex cursor-pointer items-center gap-1 font-semibold text-blue-deep hover:text-ink">
+          <Download size={13} aria-hidden="true" /> Outlook / other (.ics)
+        </button>
+        {print && (
+          <button type="button" onClick={() => window.print()} className="inline-flex cursor-pointer items-center gap-1 font-semibold text-blue-deep hover:text-ink">
+            <Printer size={13} aria-hidden="true" /> Print wall chart
+          </button>
+        )}
       </div>
+      {error && <p className="mt-2 mb-0 text-[12.5px] font-medium text-magenta-deep">{error}</p>}
     </div>
   );
 }
