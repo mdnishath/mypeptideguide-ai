@@ -9,8 +9,8 @@ const FieldId = createContext<string | undefined>(undefined);
 export function Field({ label, children, hint }: { label: string; children: ReactNode; hint?: string }) {
   const id = useId();
   return (
-    <div className="border-b border-line-2 pb-2 focus-within:border-blue">
-      <label htmlFor={id} className="eyebrow block">
+    <div className="min-w-0 border-b border-line-2 pb-2 focus-within:border-blue">
+      <label htmlFor={id} className="eyebrow block whitespace-nowrap">
         {label}
       </label>
       <FieldId.Provider value={id}>{children}</FieldId.Provider>
@@ -19,7 +19,7 @@ export function Field({ label, children, hint }: { label: string; children: Reac
   );
 }
 
-const control = "mt-1 w-full border-none bg-transparent p-0 text-[18px] font-medium text-ink outline-none";
+const control = "mt-1 w-full min-w-0 border-none bg-transparent p-0 text-[18px] font-medium text-ink outline-none";
 
 /**
  * A number input that keeps what's typed ("2.", "0.0") while committing the

@@ -82,17 +82,14 @@ export default function GoalTile({
       </span>
 
       {count && (
-        <span className="tnum mt-auto flex items-center gap-2 border-t border-[var(--tone-wash)] pt-3 text-[12px] text-muted">
-          <span className="font-semibold text-ink">{count.total}</span> compounds
-          {count.rct > 0 && (
-            <>
-              <span className="text-line-2">·</span>
-              <span className="inline-flex items-center gap-1.5">
-                <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-green" />
-                {count.rct} with human trials
-              </span>
-            </>
-          )}
+        <span className="tnum mt-auto block border-t border-[var(--tone-wash)] pt-3 text-[12.5px] leading-[1.5] text-muted">
+          <span className="block">
+            <span className="font-semibold text-ink">{count.total}</span> compounds
+          </span>
+          <span className="flex items-center gap-1.5 whitespace-nowrap">
+            <span aria-hidden="true" className={`h-1.5 w-1.5 shrink-0 rounded-full ${count.rct ? "bg-green" : "bg-line-2"}`} />
+            {count.rct ? `${count.rct} with human trials` : "no human trials yet"}
+          </span>
         </span>
       )}
     </button>

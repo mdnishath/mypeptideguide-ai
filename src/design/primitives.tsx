@@ -9,12 +9,12 @@ import { GRADE_LABEL } from "@/core/taxonomy";
 /* -------------------------------------------------------------------------- */
 
 export function Container({ children, className = "", wide = false }: { children: ReactNode; className?: string; wide?: boolean }) {
-  return <div className={`mx-auto w-full ${wide ? "max-w-[1280px]" : "max-w-[1120px]"} px-5 sm:px-8 ${className}`}>{children}</div>;
+  return <div className={`mx-auto w-full ${wide ? "max-w-[1440px]" : "max-w-[1280px]"} px-5 sm:px-8 ${className}`}>{children}</div>;
 }
 
 /** A reading column, for pages that are mostly prose. */
 export function Column({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`mx-auto w-full max-w-[760px] px-5 sm:px-8 ${className}`}>{children}</div>;
+  return <div className={`mx-auto w-full max-w-[880px] px-5 sm:px-8 ${className}`}>{children}</div>;
 }
 
 /** Inner-page header on a soft wash: eyebrow, display title, lede. */

@@ -1,6 +1,6 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { Check, MinusCircle } from "lucide-react";
 import type { ReactNode } from "react";
 import type { GoalSlug } from "@/core/schema";
 import { GOALS } from "@/core/taxonomy";
@@ -62,18 +62,48 @@ export function GoalGrid({
   value,
   exclude,
   onPick,
+  onSkip,
   label,
 }: {
   value: GoalSlug | "none" | null;
   exclude?: GoalSlug | null;
   onPick: (g: GoalSlug) => void;
+  /** Renders a "no second goal" tile in the grid. */
+  onSkip?: () => void;
   label: string;
 }) {
+  const skipped = value === "none";
   return (
-    <div role="radiogroup" aria-label={label} className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+    <div role="radiogroup" aria-label={label} className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
       {GOALS.filter((g) => g.slug !== exclude).map((g) => (
         <GoalTile key={g.slug} goal={g} role="radio" selected={value === g.slug} onClick={() => onPick(g.slug)} />
       ))}
+      {onSkip && (
+        <button
+          type="button"
+          role="radio"
+          aria-checked={skipped}
+          onClick={onSkip}
+          className={`tile group flex cursor-pointer flex-col gap-4 rounded-[22px] border border-dashed p-5 text-left ${
+            skipped ? "border-ink bg-paper-2 shadow-lift" : "border-line-2 bg-paper hover:border-ink"
+          }`}
+        >
+          <span className="flex items-center justify-between">
+            <span className={`flex h-11 w-11 items-center justify-center rounded-full ${skipped ? "bg-ink text-white" : "bg-paper-2 text-muted group-hover:bg-ink group-hover:text-white"}`}>
+              <MinusCircle size={20} strokeWidth={1.75} aria-hidden="true" />
+            </span>
+            {skipped && (
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ink text-white">
+                <Check size={13} strokeWidth={3} aria-hidden="true" />
+              </span>
+            )}
+          </span>
+          <span>
+            <span className="block text-[17px] font-bold tracking-[-0.02em] text-ink">No second goal</span>
+            <span className="mt-1 block text-[12.5px] leading-[1.45] text-body">Skip this and keep one goal.</span>
+          </span>
+        </button>
+      )}
     </div>
   );
 }

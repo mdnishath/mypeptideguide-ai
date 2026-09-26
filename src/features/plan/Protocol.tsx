@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { CalendarDays, Download, Plus } from "lucide-react";
+import { CalendarDays, Plus } from "lucide-react";
 import type { CompoundSummary } from "@/core/schema";
 import { defaultItem, emptyPlan, todayISO, type Plan, type PlanItem } from "@/core/plan/plan";
 import { planWarnings } from "@/core/plan/warnings";
 import { buildSchedule } from "@/core/plan/schedule";
 import { calendarEventsFor } from "@/core/plan/google";
-import { downloadText, scheduleToIcs } from "@/core/plan/ics";
 import { fmt, formatDose } from "@/core/dose";
 import { usePlan } from "@/state/usePlan";
 import { Button, Container, Display, Em, Eyebrow, Lede, Notice } from "@/design/primitives";
@@ -17,7 +16,7 @@ import BodyDiagram from "@/features/calendar/BodyDiagram";
 import { IM_SITES, SUBQ_SITES } from "@/core/plan/schedule";
 import { DateField, Field } from "./fields";
 import CompoundSteps, { summaryOf } from "./CompoundSteps";
-import GoogleCalendarList from "./GoogleCalendar";
+import CalendarExport from "./CalendarExport";
 import PlanActions, { IncomingBanner } from "./PlanActions";
 
 const TONE_ORDER: ToneKey[] = ["blue", "purple", "green", "orange", "magenta", "cyan", "royal", "indigo"];
@@ -66,7 +65,6 @@ export default function Protocol({ compounds }: { compounds: CompoundSummary[] }
   const warnings = useMemo(() => planWarnings(plan, bySlug), [plan, bySlug]);
   const schedule = useMemo(() => buildSchedule(plan, bySlug), [plan, bySlug]);
   const gcal = useMemo(() => calendarEventsFor(schedule, (slug) => plan.items.find((i) => i.slug === slug)?.frequency ?? "daily"), [schedule, plan.items]);
-  const [icsError, setIcsError] = useState<string | null>(null);
 
   if (!hydrated) return <div className="min-h-[70vh]" />;
 
@@ -77,13 +75,6 @@ export default function Protocol({ compounds }: { compounds: CompoundSummary[] }
   const next = schedule.events.find((e) => e.date >= today) ?? schedule.events[0] ?? null;
   const colorOf = (slug: string) => TONES[TONE_ORDER[Math.max(0, plan.items.findIndex((i) => i.slug === slug)) % 8]].tone;
   const missing = plan.items.filter((i) => i.frequency !== "as-needed" && !i.dose && !i.titration?.length);
-
-  const exportIcs = () => {
-    const out = scheduleToIcs(schedule);
-    if (!out.ok) return setIcsError(out.error);
-    setIcsError(null);
-    downloadText("mypeptideguide-protocol.ics", out.ics, "text/calendar;charset=utf-8");
-  };
 
   return (
     <>
@@ -127,7 +118,7 @@ export default function Protocol({ compounds }: { compounds: CompoundSummary[] }
             </div>
           </div>
         ) : (
-          <div className="grid gap-10 lg:grid-cols-[1fr_360px] lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-start">
             {/* Steps */}
             <div className="flex min-w-0 flex-col gap-5">
               <Notice compact />
@@ -255,15 +246,11 @@ export default function Protocol({ compounds }: { compounds: CompoundSummary[] }
               </section>
 
               <section style={toneStyle("blue")} className="tone-card p-6">
-                <div className="eyebrow text-[var(--tone-deep)]">Put it on your calendar</div>
-                <p className="mt-2 mb-4 text-[13px] leading-[1.55] text-body">Reminders in the calendar you already use, with dose, units and site.</p>
-                <GoogleCalendarList events={gcal} compact />
-                <div className="mt-3 flex flex-col gap-2">
-                  <Button variant="secondary" onClick={exportIcs} className="w-full">
-                    <Download size={16} aria-hidden="true" /> Apple / Outlook (.ics)
-                  </Button>
-                  {icsError && <p className="m-0 text-[12.5px] text-magenta-deep">{icsError}</p>}
-                  <Button href="/calendar" variant="ink" className="w-full" arrow>
+                <h2 className="m-0 text-[18px] font-bold tracking-[-0.02em] text-ink">Put it on your calendar</h2>
+                <p className="mt-1 mb-5 text-[13px] leading-[1.55] text-body">One tap. Reminders in the calendar you already use, with dose, units and site.</p>
+                <CalendarExport schedule={schedule} gcal={gcal} compact />
+                <div className="hairline mt-5 pt-4">
+                  <Button href="/calendar" variant="secondary" className="w-full" arrow>
                     Open the full calendar
                   </Button>
                 </div>

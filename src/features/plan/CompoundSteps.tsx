@@ -233,7 +233,7 @@ export default function CompoundSteps({
 
           {/* 2 · When */}
           <Step n={2} title="When" done tone={tone}>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-5 lg:grid-cols-5">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3">
               <Field label="Frequency">
                 <SelectField value={item.frequency} onChange={(v) => update({ frequency: v })} options={FREQUENCIES.map((f) => ({ value: f, label: FREQUENCY_LABEL[f] }))} />
               </Field>

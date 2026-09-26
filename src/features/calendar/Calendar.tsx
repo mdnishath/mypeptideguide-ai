@@ -2,16 +2,15 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { CalendarDays, Check, ChevronLeft, ChevronRight, Printer, X } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { CompoundSummary } from "@/core/schema";
 import { ROUTE_LABEL } from "@/core/taxonomy";
 import { fmt, formatDose } from "@/core/dose";
 import { todayISO, type Plan } from "@/core/plan/plan";
 import { usePlan } from "@/state/usePlan";
 import { IM_SITES, SUBQ_SITES, addDays, buildSchedule, daysBetween, toDay, type DoseEvent, type Schedule } from "@/core/plan/schedule";
-import { downloadText, scheduleToIcs } from "@/core/plan/ics";
 import { calendarEventsFor } from "@/core/plan/google";
-import GoogleCalendarList from "../plan/GoogleCalendar";
+import CalendarExport from "../plan/CalendarExport";
 import { KEYS, useStored } from "@/state/store";
 import { Button, Container, Display, Em, Notice } from "@/design/primitives";
 import { DateField, Field } from "../plan/fields";
@@ -235,7 +234,6 @@ export default function Calendar({ compounds }: { compounds: CompoundSummary[] }
   const [view, setView] = useState<"month" | "week">("month");
   const [cursor, setCursor] = useState<string | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
-  const [icsError, setIcsError] = useState<string | null>(null);
 
   const schedule = useMemo(() => (plan ? buildSchedule(plan, bySlug) : null), [plan, bySlug]);
   const gcal = useMemo(
@@ -302,13 +300,6 @@ export default function Calendar({ compounds }: { compounds: CompoundSummary[] }
   const weekStart = addDays(focus, -weekday(focus));
   const dayEvents = selected ? (byDate.get(selected) ?? []) : [];
 
-  const exportIcs = () => {
-    const out = scheduleToIcs(schedule);
-    if (!out.ok) return setIcsError(out.error);
-    setIcsError(null);
-    downloadText("mypeptideguide-protocol.ics", out.ics, "text/calendar;charset=utf-8");
-  };
-
   const navBtn = "flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-line-2 text-ink hover:border-ink";
 
   return (
@@ -331,30 +322,11 @@ export default function Calendar({ compounds }: { compounds: CompoundSummary[] }
           <Notice compact className="mt-6" />
 
           {/* Exports first: it's what makes a web product competitive with an app */}
-          <div className="hairline mt-8 grid gap-8 pt-6 lg:grid-cols-2">
-            <div>
-              <div className="eyebrow">Google Calendar</div>
-              <div className="mt-3">
-                <GoogleCalendarList events={gcal} />
-              </div>
-            </div>
-            <div>
-              <div className="eyebrow">Apple, Outlook, anything else</div>
-              <div className="mt-3 flex flex-wrap items-center gap-3">
-                <Button onClick={exportIcs} size="lg">
-                  <CalendarDays size={17} aria-hidden="true" /> Download .ics
-                </Button>
-                <Button onClick={() => window.print()} variant="secondary" size="lg">
-                  <Printer size={16} aria-hidden="true" /> Print wall chart
-                </Button>
-              </div>
-              <p className="measure mt-3 mb-0 text-[13px] leading-[1.6] text-body">
-                One event per dose with a reminder 15 minutes before, including dose, units to draw and the exact injection site for that day. Google
-                Calendar can import it too (<i>Settings → Import &amp; export</i>). Ticks on this page stay in this browser.
-              </p>
-            </div>
-            {icsError && <p className="mt-2 mb-0 text-[13px] font-medium text-magenta-deep">{icsError}</p>}
-            <div className="mt-4">
+          <div className="hairline mt-8 pt-6">
+            <h2 className="m-0 text-[18px] font-bold tracking-[-0.02em] text-ink">Put it on your calendar</h2>
+            <p className="mt-1 mb-5 text-[13px] text-body">One tap. Ticks on this page stay in this browser; reminders fire in whatever calendar you add it to.</p>
+            <CalendarExport schedule={schedule} gcal={gcal} print />
+            <div className="mt-5">
               <PlanActions plan={plan} knownSlugs={known} onImport={(p) => setPlan(p)} path="/calendar" />
             </div>
           </div>

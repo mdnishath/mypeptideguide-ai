@@ -174,7 +174,7 @@ export default function GuideFlow({ compounds }: { compounds: CompoundSummary[] 
       <FlowBar step={step + 1} total={QUESTIONS.length} progress={progress} />
 
       <Container className={`pt-10 pb-16 sm:pt-14 transition-opacity ${hydrated ? "opacity-100" : "opacity-0"}`}>
-        <section key={q.id} aria-live="polite" className="step-in w-full max-w-[960px]">
+        <section key={q.id} aria-live="polite" className="step-in w-full">
           <div className="eyebrow text-purple-deep">{q.eyebrow}</div>
           <Display size="lg" className="mt-3">
             {q.title}
@@ -192,16 +192,13 @@ export default function GuideFlow({ compounds }: { compounds: CompoundSummary[] 
 
             {q.id === "secondaryGoal" && (
               <>
-                <GoalGrid label={q.title} value={answers.secondaryGoal} exclude={answers.primaryGoal} onPick={(g) => pickAndNext({ secondaryGoal: g })} />
-                <button
-                  type="button"
-                  onClick={() => pickAndNext({ secondaryGoal: "none" })}
-                  className={`mt-4 cursor-pointer text-[15px] font-medium underline-offset-4 hover:underline ${
-                    answers.secondaryGoal === "none" ? "text-ink underline" : "text-blue-deep"
-                  }`}
-                >
-                  No second goal, skip this
-                </button>
+                <GoalGrid
+                  label={q.title}
+                  value={answers.secondaryGoal}
+                  exclude={answers.primaryGoal}
+                  onPick={(g) => pickAndNext({ secondaryGoal: g })}
+                  onSkip={() => pickAndNext({ secondaryGoal: "none" })}
+                />
               </>
             )}
 
